@@ -1,10 +1,10 @@
-
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
     <div className="navbar bg-base-100">
   <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl">BookBuddy</a>
+    <Link to="/" className="btn btn-ghost normal-case text-xl">BookBuddy</Link>
   </div>
   <div className="flex-none gap-2">
     <div className="form-control">
@@ -24,7 +24,7 @@ function Navbar() {
           </a>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><Link to="/login">Login</Link></li>
       </ul>
     </div>
   </div>
