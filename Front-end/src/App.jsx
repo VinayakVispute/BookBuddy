@@ -1,15 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home, Login } from './Pages'
+import { Footer, Navbar } from "./Componenets";
 
-import Home from './Pages/Home'
 
 function App() {
 
   return (
-    <>
-    <div className="">
-      <Home/>
-      <h1>Let&apos;s have a great start</h1>
+    <div className="bg-gray-500">
+      <Router basename="/">
+        <Navbar />
+        <Routes>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
+        </Routes>
+        <Footer />
+      </Router>
     </div>
-    </>
   )
 }
 
