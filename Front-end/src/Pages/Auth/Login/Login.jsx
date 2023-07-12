@@ -27,7 +27,7 @@ function Login() {
           <button className="btn btn-primary">Sign Up</button>
           
           <a href="" className="mt-3 mb-1 ">alredy have account?</a>
-          <button className="btn bg-base-200">Login </button>
+          <button className="btn bg-blue-700 hover:bg-blue-800">Login </button>
           <a href="" className="text-center mt-2 underline text-blue-500">Login as admin.</a>
         </div>
       </div>
