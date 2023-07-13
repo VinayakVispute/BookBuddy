@@ -1,10 +1,29 @@
 const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema({
-  studentID: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  phoneNumber: { type: String, required: true },
+  studentID: {
+    type: String,
+    required: [true, "Please provide an StudentID!"],
+    unique: [true, "Already Exist"],
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: [true, "Please provide an Name!"],
+    required: true,
+  },
+  email: {
+    type: String,
+    required: [true, "Please provide an Email!"],
+    unique: [true, "Already Exist"],
+  },
+  phoneNumber: {
+    type: String,
+    required: [true, "Please provide an Phone Number!"],
+  },
   borrowedBooks: [{ type: mongoose.Schema.Types.ObjectId, ref: "Book" }],
 });
 
