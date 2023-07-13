@@ -1,21 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Login } from './Pages'
+import {
+  Home,
+  Login,
+  AdminLogin,
+  Register
+} from './Pages'
 import { Footer, Navbar } from "./Componenets";
 
 
 function App() {
 
   return (
-    <div className="bg-gray-500">
+    <div >
       <Router basename="/">
         <Navbar />
         <Routes>
-          <Route exact path="/login" element={<Login />}></Route>
-          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/Auth" element={<Login />} />
+          <Route exact path="/Auth/Administration" element={<AdminLogin />} />
+          <Route exact path="/Register" element={<Register />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
-        <Footer />
       </Router>
-    </div>
+      <Footer/>
+    </div >
   )
 }
 

@@ -1,9 +1,11 @@
-import Home from './Home/Home';
-import Login from './Auth/Login/Login'
-
+import { Login, AdminLogin } from "./Auth/Login"
+import Register from './Auth/Register'
+import Home from "./Home"
 
 
 export {
     Home,
-    Login
+    Login,
+    AdminLogin,
+    Register
 }

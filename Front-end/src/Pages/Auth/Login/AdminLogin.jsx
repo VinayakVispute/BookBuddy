@@ -89,7 +89,7 @@ export default function SignInSide() {
                   required
                   fullWidth
                   id="email"
-                  label="Student Username"
+                  label="Administration Username"
                   name="email"
                   autoComplete="email"
                   autoFocus
