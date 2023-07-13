@@ -3,7 +3,8 @@ import {
   Home,
   Login,
   AdminLogin,
-  Register
+  Register,
+  Display
 } from './Pages'
 import { Footer, Navbar } from "./Componenets";
 
@@ -19,6 +20,8 @@ function App() {
           <Route exact path="/Auth/Administration" element={<AdminLogin />} />
           <Route exact path="/Register" element={<Register />} />
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/Display" element={<Display />}></Route>
+
         </Routes>
       </Router>
       <Footer/>
