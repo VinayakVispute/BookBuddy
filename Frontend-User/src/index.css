@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Azonix';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Azonix'), url('https://res.cloudinary.com/djqjag779/raw/upload/v1689227056/AFourathon/vkqawvtys3p84sbl5fkb.woff') format('woff');
+  }
+  
