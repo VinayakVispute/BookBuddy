@@ -21,7 +21,8 @@ import Alert from "../../../Componenets/Alert";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import axios from "axios";
-
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const theme = createTheme();
 
 const SignInSide = () => {
@@ -33,7 +34,7 @@ const SignInSide = () => {
   const [severity, setSeverity] = useState("success");
   const [error, setError] = useState(null);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
+  const navigate = useNavigate();
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -69,7 +70,11 @@ const SignInSide = () => {
         setMessage(data.message);
         setSeverity("success");
         setErrorField(true);
-        // Redirect or perform any other actions upon successful login
+        console.log(data);
+        if (data.user.role === "student") {
+          // Redirect to the student route
+          navigate("/Student", { state: { user: data.user } });
+        }
       } else {
         setMessage(data.message);
         console.log(data.message);

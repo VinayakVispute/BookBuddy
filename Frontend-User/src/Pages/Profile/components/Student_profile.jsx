@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
 
-function Student_profile() {
+function Student_profile({ user }) {
   // Sample student data
+
   const student = {
-    name: "John Doe",
-    id: "123456",
-    email: "johndoe@example.com",
-    contact: "123-456-7890",
-    borrowedBooks: [
-      { id: 1, title: "Book 1", dueDate: "2023-07-31" },
-      { id: 2, title: "Book 2", dueDate: "2023-08-15" },
-      { id: 3, title: "Book 3", dueDate: "2023-08-07" },
-    ],
+    name: user.name,
+    id: user.studentID,
+    email: user.email,
+    contact: user.phoneNumber,
+    imageUrl: user.imageUrl,
+    borrowedBooks: user.borrowedBooks,
   };
 
   // Generate a unique student ID and QR code
@@ -21,7 +19,7 @@ function Student_profile() {
       <div className="flex flex-col  lg:flex-row lg:justify-center lg:items-center bg-gray-800 border-0 rounded-lg container py-20 mx-auto px-4">
         <div className="p-5 border-0 shadow-lg shadow-black rounded-lg max-w-md mx-auto lg:w-96 lg:mx-10">
           <img
-            src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png"
+            src={student.imageUrl}
             alt="Student QR Code"
             className="w-32 h-32 my-4 object-cover border-0 rounded-full hover:shadow-xl hover:shadow-gray-900 mx-auto"
           />

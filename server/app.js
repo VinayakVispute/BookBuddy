@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const studentRoutes = require("./routes/studentRoutes");
+const bookRouters = require("./routes/BooksRoutes");
 const connectDB = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const fileUpload = require("express-fileupload");
@@ -21,6 +22,7 @@ app.use(
 
 // Routes
 app.use("/", studentRoutes);
+app.use("/books", bookRouters);
 
 // Error handler middleware
 app.use(errorHandlerMiddleware);
