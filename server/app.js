@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-
+const cors = require("cors");
 const studentRoutes = require("./routes/studentRoutes");
 const connectDB = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error-handler");
-
 require("dotenv").config();
+app.use(cors());
 
 //route
 app.use(express.json());

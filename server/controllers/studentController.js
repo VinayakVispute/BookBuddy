@@ -64,21 +64,31 @@ const login = async (req, res) => {
     console.log(req.body);
     const { email, password } = req.body;
     //validation on email and password
-    if (!email || !password) {
+
+    if (!email && !password) {
       return res.status(400).json({
         success: false,
-        message: "PLease fill all the details carefully",
+        message: "Please provide your email and password.",
+      });
+    } else if (!email) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide your email.",
+      });
+    } else if (!password) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide your password.",
       });
     }
 
     //check for registered user
     let user = await User.findOne({ email });
     //if not a registered user
-    console.log(user);
     if (!user) {
       return res.status(401).json({
         success: false,
-        message: "User is not registered",
+        message: "User is not Registered",
       });
     }
 
