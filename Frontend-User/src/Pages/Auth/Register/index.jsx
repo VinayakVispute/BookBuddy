@@ -13,6 +13,7 @@ import {
   Paper,
   Box,
   Grid,
+  FormLabel,
   Typography,
   createTheme,
   ThemeProvider,
@@ -26,6 +27,7 @@ const theme = createTheme();
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [reshowPassword, setReShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +41,14 @@ const Register = () => {
   const [severity, setSeverity] = useState("success");
   const [error, setError] = useState(null);
   const [submitClicked, setSubmitClicked] = useState(false);
+  const [imageFile, setImageFile] = useState(null);
+
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleClickReShowPassword = () => setReShowPassword((show) => !show);
+  const handleFileChange = (e) => {
+    setImageFile(e.target.files[0]);
+    console.log(imageFile);
+  };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -125,17 +134,42 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/auth", {
-        email,
-        password,
-      });
+      console.log(studentName);
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append("studentID", studentId);
+      formData.append("name", studentName);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("phoneNumber", phoneNumber);
+      console.log(imageFile);
+      formData.append("imageFile", imageFile);
+
+      const response = await axios.post(
+        "http://localhost:3000/auth/register",
+        {
+          studentID: studentId,
+          name: studentName,
+          email,
+          password,
+          phoneNumber,
+          imageUrl: imageFile,
+        },
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       const { data } = response;
+      console.log(data);
 
       if (data.success) {
         setMessage(data.message);
         setSeverity("success");
         setErrorField(true);
-        // Redirect or perform any other actions upon successful login
+        // Redirect or perform any other actions upon successful registration
       } else {
         setMessage(data.message);
         console.log(data.message);
@@ -143,15 +177,15 @@ const Register = () => {
         setErrorField(true);
       }
     } catch (error) {
-      setMessage(error.response.data.message);
-      console.log(error.response.data.message);
+      setMessage("User cannot be registered, please try again later");
+      console.log(error.message);
       setSeverity("error");
       setErrorField(true);
     }
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-[100%]">
       {errorField ? (
         <Alert
           onClose={handleClose}
@@ -251,14 +285,28 @@ const Register = () => {
                       ? "Password is required"
                       : ""
                   }
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          edge="end"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
+
                 <TextField
                   margin="normal"
                   required
                   fullWidth
                   name="rePassword"
                   label="Password Confirmation"
-                  type={showPassword ? "text" : "password"}
+                  type={reshowPassword ? "text" : "password"}
                   id="rePassword"
                   value={rePassword}
                   onChange={(e) => setRePassword(e.target.value)}
@@ -268,6 +316,19 @@ const Register = () => {
                       ? "Passwords do not match"
                       : ""
                   }
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickReShowPassword}
+                          edge="end"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
                 <TextField
                   margin="normal"
@@ -318,6 +379,17 @@ const Register = () => {
                     (phoneNumber === "" || phoneNumberError !== null)
                   }
                   helperText={submitClicked ? phoneNumberError || "" : ""}
+                />
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="file"
+                  id="profileImage"
+                  name="profileImage"
+                  autoFocus
+                  onChange={handleFileChange}
+                  accept="image/jpeg, image/png"
                 />
 
                 <Button

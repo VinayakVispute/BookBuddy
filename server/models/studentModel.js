@@ -24,6 +24,9 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide an Phone Number!"],
   },
+  imageUrl: {
+    type: String,
+  },
   borrowedBooks: [{ type: mongoose.Schema.Types.ObjectId, ref: "Book" }],
 });
 
