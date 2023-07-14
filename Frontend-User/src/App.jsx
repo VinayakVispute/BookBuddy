@@ -16,7 +16,6 @@ function App() {
           <Route exact path="/Student/Profile" element={<Profile />}></Route>
           <Route exact path="/Temp" element={<Temp />}></Route>
           <Route exact path="/Student/Allocation" element={<Allocation />}></Route>
-
         </Routes>
       </Router>
       <Footer />
