@@ -35,13 +35,13 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <a>Settings</a>
-            </li>
-            <li>
               <Link to="/Admin/Dashboard">Dashboard</Link>
             </li>
             <li>
               <Link to="/Student/Allocation">Allocated Books</Link>
+            </li>
+            <li>
+              <Link to="/Admin/SubmitBook">Add Book</Link>
             </li>
             <li>
               <Link to="/login">Login</Link>

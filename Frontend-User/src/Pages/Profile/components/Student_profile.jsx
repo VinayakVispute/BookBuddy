@@ -13,7 +13,7 @@ function Student_profile() {
   // Generate a unique student ID and QR code
   const uniqueId = `#${student.id}`;
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 min-h-screen">
       <div className="flex flex-col  lg:flex-row lg:justify-center lg:items-center bg-gray-900 border-0 rounded-lg container py-20 mx-auto px-4">
         <div className="p-5 border-0 bg-gray-800 shadow-lg shadow-black rounded-lg max-w-md mx-auto lg:w-96 lg:mx-10">
           <img
