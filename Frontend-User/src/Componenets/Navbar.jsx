@@ -28,6 +28,7 @@ function Navbar() {
           </a>
         </li>
         <li><a>Settings</a></li>
+        <li><Link to='/Admin/Dashboard'>Dashboard</Link></li>
         <li><Link to="/login">Login</Link></li>
       </ul>
     </div>

@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/Register" element={<Register />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Display" element={<Display />}></Route>
-          <Route exact path="/Dashboard" element={<Dashboard />}></Route>
+          <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
 
         </Routes>
       </Router>
