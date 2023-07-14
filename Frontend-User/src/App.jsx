@@ -6,7 +6,8 @@ import {
   Register,
   Display,
   Dashboard,
-  Profile
+  Profile,
+  Allocation
 } from './Pages'
 import { Footer, Navbar } from "./Componenets";
 
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/Display" element={<Display />}></Route>
           <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
           <Route exact path="/Student/Profile" element={<Profile />}></Route>
+          <Route exact path="/Student/Allocation" element={<Allocation />}></Route>
 
         </Routes>
       </Router>
