@@ -185,7 +185,7 @@ const Register = () => {
   };
 
   return (
-    <div className="h-[100%]">
+    <div className="min-h-screen">
       {errorField ? (
         <Alert
           onClose={handleClose}

@@ -44,7 +44,7 @@ function Navbar() {
               <Link to="/Admin/SubmitBook">Add Book</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/Auth">Login</Link>
             </li>
           </ul>
         </div>
