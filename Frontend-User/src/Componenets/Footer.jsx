@@ -1,16 +1,16 @@
 
 function Footer() {
   return (
-    <footer className="footer p-10 bg-base-300 text-base-content">
-  <div>
-    <span className="footer-title">Services</span> 
+    <footer className="flex flex-row justify-around p-10 bg-base-300 text-base-content">
+  <div className="flex flex-col">
+    <span >Services</span> 
     <a className="link link-hover">Book Catalog</a> 
     <a className="link link-hover">Book Availability</a> 
     <a className="link link-hover">Reading History</a> 
     <a className="link link-hover">Search for book</a>
   </div> 
-  <div>
-    <span className="footer-title">Company</span> 
+  <div className="flex flex-col">
+    <span >Company</span> 
     <a className="link link-hover">About us</a> 
     <a className="link link-hover">Contact</a> 
     <a className="link link-hover">Jobs</a> 

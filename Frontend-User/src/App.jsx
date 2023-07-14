@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Login, Register, Display } from "./Pages";
-import { Footer, Navbar } from "./Componenets";
+import { Home, Login, Register, Display, Dashboard, Profile } from "./Pages";
+import { Footer, Navbar, Temp } from "./Componenets";
 
 function App() {
   return (
@@ -12,6 +12,9 @@ function App() {
           <Route exact path="/Register" element={<Register />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Display" element={<Display />}></Route>
+          <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
+          <Route exact path="/Student/Profile" element={<Profile />}></Route>
+          <Route exact path="/Temp" element={<Temp />}></Route>
         </Routes>
       </Router>
       <Footer />
