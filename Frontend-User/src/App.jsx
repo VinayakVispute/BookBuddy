@@ -5,7 +5,8 @@ import {
   AdminLogin,
   Register,
   Display,
-  Dashboard
+  Dashboard,
+  Profile
 } from './Pages'
 import { Footer, Navbar } from "./Componenets";
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Display" element={<Display />}></Route>
           <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
+          <Route exact path="/Student/Profile" element={<Profile />}></Route>
 
         </Routes>
       </Router>
