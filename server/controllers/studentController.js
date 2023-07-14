@@ -2,51 +2,60 @@ const bcrypt = require("bcrypt");
 const User = require("../models/studentModel");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const cloudinary = require("cloudinary").v2;
 
 const response = (req, res) => {
   console.log(req);
   res.send("Done");
 };
-// signup route handler
+
+// Signup route handler
 const signup = async (req, res) => {
   try {
-    //get data
-    console.log(req.body);
+    // Get data
     const { studentID, name, email, password, phoneNumber } = req.body;
-    //check if user already exist
-    const existingUser = await User.findOne({ email });
+    console.log(name);
 
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({
         success: false,
-        message: "User already Exists",
+        message: "User already exists",
       });
     }
 
-    //secure password
-    let hashedPassword;
-    try {
-      hashedPassword = await bcrypt.hash(password, 10);
-    } catch (err) {
-      return res.status(500).json({
+    // Validate and upload image
+    const file = req.files.imageUrl;
+    const supportedTypes = ["jpg", "jpeg", "png"];
+    const fileType = file.name.split(".")[1].toLowerCase();
+
+    if (!isFileTypeSupported(fileType, supportedTypes)) {
+      return res.status(400).json({
         success: false,
-        message: "Error inn hashing Password",
-        err: err,
+        message: "File format not supported",
       });
     }
 
-    //create entry for User
+    console.log("Uploading to Cloudinary");
+    const response = await uploadFileToCloudinary(file, "Nishit");
+
+    // Secure password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create entry for User
     const user = await User.create({
       studentID,
       name,
       email,
       password: hashedPassword,
       phoneNumber,
+      imageUrl: response.secure_url,
     });
 
     return res.status(200).json({
       success: true,
-      message: "User Created Successfully",
+      message: "User created successfully",
     });
   } catch (error) {
     console.error(error);
@@ -57,6 +66,21 @@ const signup = async (req, res) => {
   }
 };
 
+function isFileTypeSupported(type, supportedTypes) {
+  return supportedTypes.includes(type);
+}
+
+async function uploadFileToCloudinary(file, folder, quality) {
+  const options = { folder };
+
+  if (quality) {
+    options.quality = quality;
+  }
+
+  options.resource_type = "auto";
+  return await cloudinary.uploader.upload(file.tempFilePath, options);
+}
+
 //login
 const login = async (req, res) => {
   try {
@@ -64,21 +88,31 @@ const login = async (req, res) => {
     console.log(req.body);
     const { email, password } = req.body;
     //validation on email and password
-    if (!email || !password) {
+
+    if (!email && !password) {
       return res.status(400).json({
         success: false,
-        message: "PLease fill all the details carefully",
+        message: "Please provide your email and password.",
+      });
+    } else if (!email) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide your email.",
+      });
+    } else if (!password) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide your password.",
       });
     }
 
     //check for registered user
     let user = await User.findOne({ email });
     //if not a registered user
-    console.log(user);
     if (!user) {
       return res.status(401).json({
         success: false,
-        message: "User is not registered",
+        message: "User is not Registered",
       });
     }
 

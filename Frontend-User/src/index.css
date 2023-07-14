@@ -10,3 +10,8 @@
     src: local('Azonix'), url('https://res.cloudinary.com/djqjag779/raw/upload/v1689227056/AFourathon/vkqawvtys3p84sbl5fkb.woff') format('woff');
   }
   
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
