@@ -1,7 +1,7 @@
 
 function Footer() {
   return (
-    <footer className="flex flex-row justify-around p-10 bg-base-300 text-base-content">
+    <footer className="flex flex-row justify-around p-10 bg-black text-base-content">
   <div className="flex flex-col">
     <span >Services</span> 
     <a className="link link-hover">Book Catalog</a> 

@@ -15,9 +15,9 @@ function Student_profile({ user }) {
   // Generate a unique student ID and QR code
   const uniqueId = `#${student.id}`;
   return (
-    <div className="bg-gray-900">
-      <div className="flex flex-col  lg:flex-row lg:justify-center lg:items-center bg-gray-800 border-0 rounded-lg container py-20 mx-auto px-4">
-        <div className="p-5 border-0 shadow-lg shadow-black rounded-lg max-w-md mx-auto lg:w-96 lg:mx-10">
+    <div className="bg-gray-900 min-h-screen">
+      <div className="flex flex-col  lg:flex-row lg:justify-center lg:items-center bg-gray-900 border-0 rounded-lg container py-20 mx-auto px-4">
+        <div className="p-5 border-0 bg-gray-800 shadow-lg shadow-black rounded-lg max-w-md mx-auto lg:w-96 lg:mx-10">
           <img
             src={student.imageUrl}
             alt="Student QR Code"
@@ -41,31 +41,7 @@ function Student_profile({ user }) {
             <span className="font-bold">Unique ID:</span> {uniqueId}
           </p>
         </div>
-        <div>
-          <div className="p-5 border-0 shadow-lg shadow-black rounded-lg max-w-md mx-auto lg:w-96 lg:mx-10 my-10">
-            <h2 className="text-xl font-bold mb-4">Borrowed Books</h2>
-            {student.borrowedBooks.length > 0 ? (
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="py-2">Book Title</th>
-                    <th className="py-2">Due Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {student.borrowedBooks.map((book) => (
-                    <tr key={book.id}>
-                      <td className="py-2">{book.title}</td>
-                      <td className="py-2">{book.dueDate}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            ) : (
-              <p>No books currently borrowed.</p>
-            )}
-          </div>
-        </div>
+
         {/* <div>
            <h2 className="text-xl font-bold mb-4">Links</h2>
             <ul className="list-disc ml-6">

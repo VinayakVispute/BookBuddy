@@ -109,9 +109,9 @@ class Library extends Component {
 
         </div>
 
-        <div className="bg-white border-0 rounded-lg p-5 m-5">
+        <div className=" bg-white border-0 rounded-lg p-5 m-5">
         <React.Fragment>
-          <p className="text-lg font-semibold text-gray-800">Recent Books</p>
+          <p className="text-lg font-semibold text-gray-500">Recent Books</p>
           <Table size="small">
             <TableHead>
               <TableRow>
