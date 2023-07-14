@@ -8,6 +8,7 @@ import {
   Profile,
   Allocation,
   SubmitBook,
+  DetailPage
 } from "./Pages";
 import { Footer, Navbar, Temp } from "./Componenets";
 function App() {
@@ -26,13 +27,14 @@ function App() {
             exact
             path="/Admin/SubmitBook"
             element={<SubmitBook />}
-          ></Route>
+          ></Route> 
           <Route
             exact
             path="/Student/Allocation"
             element={<Allocation />}
           ></Route>
           <Route exact path="/Student" element={<Profile />}></Route>
+          <Route exact path="/DetailPage" element={<DetailPage />}></Route>
         </Routes>
       </Router>
       <Footer />

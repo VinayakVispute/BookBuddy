@@ -1,32 +1,46 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
+function BookCard({ book }) {
+  const [showDescription, setShowDescription] = useState(false);
 
-function BookCard({ title, author, image, description }) {
-  const updatedDesc = description.split(" ").slice(0, 10).join(" ");
-
-  const display_image =
-    "https://th.bing.com/th/id/OIP.I5wxkhAJmmR3sWPFaCtEcQHaE8?pid=ImgDet&rs=1";
-
-
+  const toggleDescription = () => {
+    setShowDescription(!showDescription);
+  };
   return (
     <div className="card w-72 bg-gray-800 hover:shadow-lg hover:shadow-black my-5 p-2 transition duration-250 hover:-translate-y-2 mx-2">
-      <figure>
-        <img className="border-0 rounded-lg" src={display_image} alt="Book" />
-      </figure>
-      <div className="card-body p-4 text-white">
-        <h2 className="card-title">{title}</h2>
-        <p>author: {author}</p>
-          <p className="mb-5">{updatedDesc}</p>
-{/* 
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Science</div>
-          <div className="badge badge-outline">Engineering</div>
-        </div> */}
-        <button className="btn btn-primary w-32 mx-auto">
-          more
-        </button>
+    <figure>
+      <img className="border-0 rounded-lg h-[285px]" src={book.imageUrl}  alt="Book" />
+    </figure>
+    <div className="card-body p-4 text-white">
+      <div className="font-bold text-2xl mb-2 text-center ">{book.title}</div>
+      <div className="flex justify-evenly">
+        <p>Code: {book.code}</p>
+        <p>Author: {book.author}</p>
       </div>
+     {showDescription ? (
+  <p className="mx-5 max-w-[200px] text-slate-700 text-base">
+    {book.description}
+  </p>
+) : (
+  <p className="mx-5 max-w-[200px] text-slate-700 text-base">
+    {book.description.split(" ").slice(0, 25).join(" ")}
+    {book.description.split(" ").length > 25 && "..."}
+  </p>
+)}
+      {book.description && (
+  <span className="cursor-pointer" onClick={toggleDescription}>
+    {showDescription ? "Less" : "More"}
+  </span>
+)}
+
     </div>
-  );
+    <div className="flex justify-center items-center">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-32">
+  View More
+</button>
+    </div>
+  </div>
+);
 }
 
 BookCard.propTypes = {
