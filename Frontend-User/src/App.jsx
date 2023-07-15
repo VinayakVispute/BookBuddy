@@ -10,6 +10,7 @@ import {
   SubmitBook,
 } from "./Pages";
 import { Footer, Navbar, Temp } from "./Componenets";
+import Book from "./Pages/Display/components/Book";
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/Display" element={<Display />}></Route>
           <Route exact path="/Temp" element={<Temp />}></Route>
           <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
+          <Route exact path="/Book" element={<Book />}></Route>
           <Route
             exact
             path="/Admin/SubmitBook"

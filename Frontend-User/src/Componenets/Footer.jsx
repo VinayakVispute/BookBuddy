@@ -1,7 +1,7 @@
 
 function Footer() {
   return (
-    <div className="bg-black text-white py-4">
+    <div className="bg-black text-white p-4">
       <div className="container mx-auto">
         <div className="flex justify-between">
           <div>

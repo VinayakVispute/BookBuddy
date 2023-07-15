@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 function BookCard({ title, author, image, description }) {
@@ -21,9 +22,9 @@ function BookCard({ title, author, image, description }) {
           <div className="badge badge-outline">Science</div>
           <div className="badge badge-outline">Engineering</div>
         </div> */}
-        <button className="btn btn-primary w-32 mx-auto">
+        <Link to="/Book" className="btn btn-primary w-32 mx-auto">
           more
-        </button>
+        </Link>
       </div>
     </div>
   );
