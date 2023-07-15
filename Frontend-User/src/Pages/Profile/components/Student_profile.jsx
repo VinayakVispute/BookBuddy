@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Student_profile({ user }) {
   // Sample student data
@@ -41,35 +41,14 @@ function Student_profile({ user }) {
             <span className="font-bold">Unique ID:</span> {uniqueId}
           </p>
         </div>
-
-        {/* <div>
-           <h2 className="text-xl font-bold mb-4">Links</h2>
-            <ul className="list-disc ml-6">
-              <li className="mb-2">
-                <Link to={`/student/${student.id}/profile`} className="text-blue-500 hover:underline">
-                  Profile
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to={`/student/${student.id}/courses`} className="text-blue-500 hover:underline">
-                  Courses
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to={`/student/${student.id}/grades`} className="text-blue-500 hover:underline">
-                  Grades
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to={`/student/${student.id}/library`} className="text-blue-500 hover:underline">
-                  Library
-                </Link>
-              </li>
-            </ul> 
-        </div> */}
       </div>
     </div>
   );
+}
+
+Student_profile.protoTypes={
+  user: PropTypes.string.isRequired,
+
 }
 
 export default Student_profile;

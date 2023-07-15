@@ -232,4 +232,7 @@ const BookForm = () => {
   );
 };
 
+BookForm.PropTypes={
+}
+
 export default BookForm;
