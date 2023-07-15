@@ -14,7 +14,6 @@ const signup = async (req, res) => {
   try {
     // Get data
     const { studentID, name, email, password, phoneNumber } = req.body;
-    console.log(name);
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });

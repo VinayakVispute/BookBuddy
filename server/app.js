@@ -7,7 +7,7 @@ const connectDB = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const fileUpload = require("express-fileupload");
 const cloudinary = require("./db/cloudinary");
-
+const allocationRoutes =require("./routes/allocationRoutes")
 require("dotenv").config();
 app.use(cors());
 
@@ -22,6 +22,7 @@ app.use(
 
 // Routes
 app.use("/", studentRoutes);
+app.use("/books", allocationRoutes);
 app.use("/books", bookRouters);
 
 // Error handler middleware
