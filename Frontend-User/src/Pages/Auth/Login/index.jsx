@@ -205,7 +205,7 @@ const SignInSide = () => {
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
-                  Sign In
+                  Log In
                 </Button>
                 <Grid container>
                   <Grid item xs>
@@ -214,6 +214,16 @@ const SignInSide = () => {
                     </Link>
                   </Grid>
                 </Grid>
+                      dont have an account?       
+                      <Link
+                      href="/Register"
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2, ml: 2 }}
+                >
+                  Sign In
+                </Link>
               </Box>
             </Box>
           </Grid>
