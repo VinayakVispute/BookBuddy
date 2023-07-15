@@ -90,7 +90,8 @@ const SignInSide = () => {
   };
 
   return (
-    <div className="h-[100%]">
+    <div className="bg-gray-900 min-h-screen">
+    <div className="h-[100%] my-auto">
       {errorField ? (
         <Alert
           onClose={handleClose}
@@ -218,6 +219,8 @@ const SignInSide = () => {
           </Grid>
         </Grid>
       </ThemeProvider>
+    </div>
+
     </div>
   );
 };
