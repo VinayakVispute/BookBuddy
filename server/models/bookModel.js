@@ -33,7 +33,15 @@ const bookSchema = new mongoose.Schema({
   },
   imageUrl: {
     type: String,
-    required: [true, "Please provide a genre."],
+    required: [true, "Please provide an image URL."],
+  },
+  allocationDate: {
+    type: Date,
+    default: null,
+  },
+  dueDate: {
+    type: Date,
+    default: null,
   },
 });
 

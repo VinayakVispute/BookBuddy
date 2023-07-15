@@ -25,9 +25,18 @@ const allocateBookToStudent = async (req, res) => {
         });
       }
   
+      // Set the allocation date as the current date
+      const allocationDate = new Date();
+  
+      // Set the due date as 5 days from the current date
+      const dueDate = new Date();
+      dueDate.setDate(dueDate.getDate() + 5);
+  
       // Allocate the book to the student
       book.isAllocated = true;
       book.allocatedTo = student._id;
+      book.allocationDate = allocationDate;
+      book.dueDate = dueDate;
       await book.save();
   
       // Update the student's borrowed books list
@@ -50,53 +59,54 @@ const allocateBookToStudent = async (req, res) => {
 
 // Controller method to deallocate a book from a student
 const deallocateBookFromStudent = async (req, res) => {
-  try {
-    const { bookId, studentId } = req.params;
-
-    // Find the book and student by their IDs
-    const book = await Book.findById(bookId);
-    const student = await Student.findOne({ studentID: studentId });
-
-
-    if (!book || !student) {
-      return res.status(404).json({
+    try {
+      const { bookId, studentId } = req.params;
+  
+      // Find the book and student by their IDs
+      const book = await Book.findById(bookId);
+      const student = await Student.findOne({ studentID: studentId });
+  
+      if (!book || !student) {
+        return res.status(404).json({
+          success: false,
+          message: 'Book or student not found',
+        });
+      }
+  
+      // Check if the book is already deallocated
+      if (!book.isAllocated || book.allocatedTo.toString() !== student._id.toString()) {
+        return res.status(400).json({
+          success: false,
+          message: 'Book is not allocated to this student',
+        });
+      }
+  
+      // Deallocate the book from the student
+      book.isAllocated = false;
+      book.allocatedTo = null;
+      book.allocationDate = null; // Set allocation date to null
+      book.dueDate = null; // Set due date to null
+      await book.save();
+  
+      // Remove the book ID from the student's borrowed books list
+      student.borrowedBooks = student.borrowedBooks.filter(
+        (bookId) => bookId.toString() !== book._id.toString()
+      );
+      await student.save();
+  
+      res.status(200).json({
+        success: true,
+        message: 'Book deallocated from student successfully',
+      });
+    } catch (error) {
+      console.error('Error deallocating book from student:', error);
+      res.status(500).json({
         success: false,
-        message: 'Book or student not found',
+        message: 'Failed to deallocate book from student',
       });
     }
-
-    // Check if the book is already deallocated
-    if (!book.isAllocated || book.allocatedTo.toString() !== student._id.toString()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Book is not allocated to this student',
-      });
-    }
-
-    // Deallocate the book from the student
-    book.isAllocated = false;
-    book.allocatedTo = null;
-    await book.save();
-
-    // Remove the book ID from the student's borrowed books list
-    student.borrowedBooks = student.borrowedBooks.filter(
-      (bookId) => bookId.toString() !== book._id.toString()
-    );
-    await student.save();
-
-    res.status(200).json({
-      success: true,
-      message: 'Book deallocated from student successfully',
-    });
-  } catch (error) {
-    console.error('Error deallocating book from student:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to deallocate book from student',
-    });
-  }
-};
-
+  };
+  
 const getAllBooksAllocatedByStudent = async (req, res) => {
     try {
       const { studentId } = req.params;

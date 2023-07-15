@@ -172,7 +172,7 @@ const BookDetailPage = () => {
             }}
           >
             
-            <div className="bg-cover bg-no-repeat" style={{ backgroundImage: `url(${bookData.imageUrl})`, height: 375, width: 375 }}></div>
+            <div className="bg-cover! bg-no-repeat" style={{ backgroundImage: `url(${bookData.imageUrl})`, height: 375, width: 375 }}></div>
 
           </Grid>
 
@@ -268,7 +268,7 @@ const BookDetailPage = () => {
                   }
                 />
 
-                {bookData.isAllocated ? (
+                {/* {bookData.isAllocated ? (
                   <TableContainer>
                     <Table>
                       <TableHead>
@@ -297,7 +297,7 @@ const BookDetailPage = () => {
                   <Typography variant="body1">
                     Allocated To: Nobody
                   </Typography>
-                )}
+                )} */}
 
                 {!isEditable ? (
                   <>
