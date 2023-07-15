@@ -90,7 +90,8 @@ const SignInSide = () => {
   };
 
   return (
-    <div className="h-[100%]">
+    <div className="bg-gray-900 min-h-screen">
+    <div className="h-[100%] my-auto">
       {errorField ? (
         <Alert
           onClose={handleClose}
@@ -204,7 +205,7 @@ const SignInSide = () => {
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
-                  Sign In
+                  Log In
                 </Button>
                 <Grid container>
                   <Grid item xs>
@@ -213,11 +214,23 @@ const SignInSide = () => {
                     </Link>
                   </Grid>
                 </Grid>
+                      dont have an account?       
+                      <Link
+                      href="/Register"
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2, ml: 2 }}
+                >
+                  Sign In
+                </Link>
               </Box>
             </Box>
           </Grid>
         </Grid>
       </ThemeProvider>
+    </div>
+
     </div>
   );
 };

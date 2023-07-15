@@ -30,7 +30,7 @@ function Navbar() {
             className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-black rounded-box w-52"
           >
             <li>
-              <Link to="/Student/Profile" className="justify-between">
+              <Link to="/Student" className="justify-between">
                 Profile
               </Link>
             </li>

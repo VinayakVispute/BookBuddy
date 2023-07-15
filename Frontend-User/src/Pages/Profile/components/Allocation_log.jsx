@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types"
 
 function Allocation_log({ user }) {
   const [allocatedBooks, setAllocatedBooks] = useState([]);
@@ -108,4 +109,7 @@ function Allocation_log({ user }) {
   );
 }
 
+Allocation_log.propTypes={
+  user: PropTypes.string.isRequired,
+}
 export default Allocation_log;

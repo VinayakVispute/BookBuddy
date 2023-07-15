@@ -29,7 +29,7 @@ const BookItems = () => {
   });
 
   return (
-    <div className="bg-gray-900 text-base-900 py-24 px-5">
+    <div className="bg-gray-900 text-base-900 py-24 px-5 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <div className="form-control mx-auto">
           <input
