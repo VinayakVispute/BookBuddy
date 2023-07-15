@@ -25,7 +25,7 @@ const BookForm = ({ onAddBook, onEditBook, onDeleteBook }) => {
 
   return (
     <div className="bg-gray-900 py-10 min-h-screen">
-      <div className="bg-gray-800 max-w-4xl mx-auto p-5  border-0 rounded-lg placeholder:bg-gray-600">
+      <div className="bg-gray-800 max-w-4xl mx-2 md:mx-auto p-5  border-0 rounded-lg placeholder:bg-gray-600">
         <h1 className="text-3xl font-bold mb-4">Add New Book</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
@@ -70,7 +70,7 @@ const BookForm = ({ onAddBook, onEditBook, onDeleteBook }) => {
   );
 };
 
-BookForm.PropTypes={
+BookForm.propTypes={
 }
 
 export default BookForm;
