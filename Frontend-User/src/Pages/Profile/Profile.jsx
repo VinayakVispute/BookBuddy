@@ -22,19 +22,19 @@ function Profile() {
 
   return (
     <div>
-      <div className="bg-gray-900">
+      <div className="bg-gray-900 flex justify-center pt-10 text-black font-semibold ">
         <button
           className={`${
-            activeTab === "profile" ? "bg-blue-500" : "bg-gray-300"
-          } py-2 px-4`}
+            activeTab === "profile" ? "bg-blue-600 shadow-lg shadow-black" : "bg-gray-300"
+          } py-2 px-4 rounded-l-2xl`}
           onClick={() => handleTabChange("profile")}
         >
           Profile
         </button>
         <button
           className={`${
-            activeTab === "allocation" ? "bg-blue-500" : "bg-gray-300"
-          } py-2 px-4`}
+            activeTab === "allocation" ? "bg-blue-600 shadow-lg shadow-black" : "bg-gray-300"
+          } py-2 px-4  rounded-r-2xl`}
           onClick={() => handleTabChange("allocation")}
         >
           Book Alloacted
