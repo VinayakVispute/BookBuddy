@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 function BookCard({ book }) {
   const [showDescription, setShowDescription] = useState(false);
@@ -47,17 +46,6 @@ function BookCard({ book }) {
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-32"
         >
           View More
-        </Link>
-        <h2 className="card-title">{title}</h2>
-        <p>author: {author}</p>
-          <p className="mb-5">{updatedDesc}</p>
-{/* 
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Science</div>
-          <div className="badge badge-outline">Engineering</div>
-        </div> */}
-        <Link to="/Book" className="btn btn-primary w-32 mx-auto">
-          more
         </Link>
       </div>
     </div>
