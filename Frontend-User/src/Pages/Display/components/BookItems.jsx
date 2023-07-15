@@ -1,4 +1,3 @@
-
 import BookCard from "./BookCard";
 
 const BookItems = () => {

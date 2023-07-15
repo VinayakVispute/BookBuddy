@@ -32,7 +32,7 @@ function App() {
             path="/Student/Allocation"
             element={<Allocation />}
           ></Route>
-          <Route exact path="/Student" element={<Profile />}></Route>
+          <Route exact path="/Student/Profile" element={<Profile />}></Route>
         </Routes>
       </Router>
       <Footer />
