@@ -33,9 +33,10 @@ console.log(allocatedBooks)
             </thead>
             <tbody>
               {allocatedBooks.data.map((book) => (
+                
                 <tr key={book.id}>
                   <td className="py-2">{book.title}</td>
-                  <td className="py-2">{book.dueDate}</td>
+                  <td className="py-2">{book.dueDate.substring(0,10)}</td>
                 </tr>
               ))}
             </tbody>

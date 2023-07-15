@@ -43,7 +43,14 @@ function Student_profile({ user }) {
 }
 
 Student_profile.protoTypes={
-  user: PropTypes.string.isRequired,
+  user: {
+    name: PropTypes.string.isRequired,
+    studentID: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    borrowedBooks: PropTypes.string.isRequired,
+  }
 
 }
 
