@@ -51,7 +51,7 @@ const updateBookById = async (req, res) => {
   try {
     const { id } = req.params;
     const { title, author, description, code, genre, imageUrl } = req.body;
-
+    console.log(id);
     // Find and update the book by ID
     const updatedBook = await Book.findByIdAndUpdate(
       id,
@@ -69,6 +69,8 @@ const updateBookById = async (req, res) => {
     res.status(200).json({
       success: true,
       data: updatedBook,
+      message: "Books Updated  successfully",
+
     });
   } catch (error) {
     console.error("Error updating book:", error);

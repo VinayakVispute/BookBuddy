@@ -34,7 +34,7 @@ function App() {
             element={<Allocation />}
           ></Route>
           <Route exact path="/Student" element={<Profile />}></Route>
-          <Route exact path="/DetailPage" element={<DetailPage />}></Route>
+          <Route exact path="/DetailPage/:Bookid" element={<DetailPage />}></Route>
         </Routes>
       </Router>
       <Footer />
