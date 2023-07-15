@@ -7,11 +7,13 @@ import {
   Dashboard,
   Profile,
   Allocation,
+
   SubmitBook,
   DetailPage
 } from "./Pages";
 import { Footer, Navbar, Temp } from "./Componenets";
 import Book from "./Pages/Display/components/Book";
+import StudentSearch  from "./Pages/StudentSearch/Display";
 function App() {
   return (
     <div>
@@ -19,12 +21,13 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/Search" element={<StudentSearch/>} />
           <Route exact path="/Auth" element={<Login />} />
           <Route exact path="/Register" element={<Register />} />
           <Route exact path="/Display" element={<Display />}></Route>
           <Route exact path="/Temp" element={<Temp />}></Route>
           <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
-          <Route exact path="/Book" element={<Book />}></Route>
+          {/* <Route exact path="/Book" element={<Book />}></Route> */}
           <Route
             exact
             path="/Admin/SubmitBook"

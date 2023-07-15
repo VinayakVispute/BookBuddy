@@ -7,7 +7,8 @@ import Profile from "./Profile/Profile";
 import Allocation from "./Allocation/Allocation";
 import SubmitBook from "./SubmitBook/SubmitBook";
 import DetailPage from "./DetailPage";
+import StudentSearch from './StudentSearch/Display'
 
 
 
-export { Home, Login, Register,DetailPage, Display, Dashboard, Profile,Allocation,SubmitBook};
+export { StudentSearch,Home, Login, Register,DetailPage, Display, Dashboard, Profile,Allocation,SubmitBook};

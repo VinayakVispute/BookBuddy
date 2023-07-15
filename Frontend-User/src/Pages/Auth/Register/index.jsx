@@ -147,7 +147,7 @@ const Register = () => {
       formData.append("imageFile", imageFile);
 
       const response = await axios.post(
-        "http://localhost:3000/auth/register",
+        "https://afourthanhackthon.onrender.com/auth/register",
         {
           studentID: studentId,
           name: studentName,

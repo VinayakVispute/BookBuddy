@@ -27,7 +27,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/auth/register",
+        "https://afourthanhackthon.onrender.com/auth/register",
         formData,
         {
           headers: {

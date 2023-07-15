@@ -12,7 +12,7 @@ function Allocation_log({ user }) {
   useEffect(() => {
     const fetchAllocatedBooks = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/books/allocated/${Studentid}`);
+        const response = await axios.get(`https://afourthanhackthon.onrender.com/books/allocated/${Studentid}`);
         setAllocatedBooks(response.data);
       } catch (error) {
         console.error("Error fetching allocated books:", error);

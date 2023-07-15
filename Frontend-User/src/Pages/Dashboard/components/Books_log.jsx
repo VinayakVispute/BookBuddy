@@ -29,7 +29,7 @@ const Library = () => {
       };
 
       try {
-        const response = await axios.get("http://localhost:3000/books");
+        const response = await axios.get("https://afourthanhackthon.onrender.com/books");
         setStatistics(response?.data);
         console.log(response?.data?.data);
         setTotalBooks(response.data.data?.length);
@@ -50,7 +50,7 @@ const Library = () => {
     const fetchStudentName = async (studentId) => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/students/${studentId}`
+          `https://afourthanhackthon.onrender.com/students/${studentId}`
         );
         const { name } = response.data.student;
         setStudentNames((prevNames) => ({
@@ -137,24 +137,14 @@ const Library = () => {
             </TableBody>
           </Table>
           <div className="my-5 text-black font-semibold bg-gray-100 text-lg flex justify-evenly fles-wrap border-0 rounded-lg p-5 ">
-            <a href="/student-search" className="mr-3 hover:underline">
+            <a href="/Search" className="mr-3 hover:underline">
               Student Search
             </a>
-            <a href="/due-pending" className="mr-3 hover:underline">
-              Due Pending Page
-            </a>
-            <a href="/books-dashboard" className="hover:underline">
-              Books Dashboard
+            <a href="/Display" className="hover:underline">
+              Books Search
             </a>
           </div>
-          <Link
-            color="primary"
-            href="#"
-            onClick={(event) => event.preventDefault()}
-            sx={{ mt: 3 }}
-          >
-            See more History
-          </Link>
+          
         </React.Fragment>
       </div>
     </div>

@@ -7,7 +7,7 @@ const BookItems = () => {
 
   useEffect(() => {
     // Fetch the books from the API
-    fetch("http://localhost:3000/books")
+    fetch("https://afourthanhackthon.onrender.com/books")
       .then((response) => response.json())
       .then((data) => setBooks(data.data))
       .catch((error) => console.log(error));
