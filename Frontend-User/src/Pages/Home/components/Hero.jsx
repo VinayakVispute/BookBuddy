@@ -5,13 +5,19 @@ import { Link } from "react-router-dom"
 function Hero() {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className=" min-h-screen flex justify-center items-center text-center">
+      <div className="flex flex-col md:flex-row justify-around max-w-4xl mx-auto">
+      <div className=" min-h-screen flex justify-center items-center text-left">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Unlock Infinite Literary Worlds.</h1>
           <p className="py-6">Discover, track, and access a vast library of books with BookBuddy. Login now to explore and check availability seamlessly.</p>
           <Link to="/Auth" className="btn btn-primary">Get Started</Link>
           <Link to="/Auth" className="btn btn-primary mx-4">LogIn</Link>
         </div>
+      </div>
+      <div className="w-72 border-0 rounded-lg flex justify-center items-center">
+        <img className="rounded-xl" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/bookshelf-512.png" alt="" />
+      </div>
+
       </div>
       <div className="bg-gray-900 text-white py-10 px-5">
       <div className="max-w-6xl mx-auto">
