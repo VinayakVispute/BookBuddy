@@ -158,8 +158,37 @@ const login = async (req, res) => {
     });
   }
 };
+
+
+
+const getStudent = async (req, res) => {
+  const { studentId } = req.params;
+  try {
+    const student = await User.findOne({ _id: studentId });
+    if (!student) {
+      return res.status(404).json({ error: 'Student not found' });
+    }
+    res.json({ student });
+  } catch (error) {
+    console.error('Error fetching student:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+
+const getAllStudents = async (req, res) => {
+  try {
+    const students = await User.find();
+    res.json({ students });
+  } catch (error) {
+    console.error('Error fetching students:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
 module.exports = {
   login,
   signup,
   response,
+  getAllStudents,
+  getStudent
 };

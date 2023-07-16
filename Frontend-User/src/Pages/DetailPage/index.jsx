@@ -68,7 +68,7 @@ const BookDetailPage = () => {
       console.log(bookData)
       // Make a POST request to update the book data
       const response = await axios.put(
-        `http://localhost:3000/books/${bookData.id}`,
+        `https://afourthanhackthon.onrender.com/books/${bookData.id}`,
         bookData
       );
 
@@ -91,7 +91,7 @@ const BookDetailPage = () => {
     try {
       // Make a DELETE request to delete the book
       const response = await axios.delete(
-        `http://localhost:3000/books/${bookData.id}`
+        `https://afourthanhackthon.onrender.com/books/${bookData.id}`
       );
       console.log("Book deleted:", response.data);
 
@@ -109,7 +109,7 @@ const BookDetailPage = () => {
   useEffect(() => {
     const fetchBookData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/books/${Bookid}`);
+        const response = await axios.get(`https://afourthanhackthon.onrender.com/books/${Bookid}`);
         console.log(response.data)
         const book = response.data;
 
@@ -172,7 +172,7 @@ const BookDetailPage = () => {
             }}
           >
             
-            <div className="bg-cover bg-no-repeat" style={{ backgroundImage: `url(${bookData.imageUrl})`, height: 375, width: 375 }}></div>
+            <div className="bg-cover! bg-no-repeat" style={{ backgroundImage: `url(${bookData.imageUrl})`, height: 375, width: 375 }}></div>
 
           </Grid>
 
@@ -268,7 +268,7 @@ const BookDetailPage = () => {
                   }
                 />
 
-                {bookData.isAllocated ? (
+                {/* {bookData.isAllocated ? (
                   <TableContainer>
                     <Table>
                       <TableHead>
@@ -297,7 +297,7 @@ const BookDetailPage = () => {
                   <Typography variant="body1">
                     Allocated To: Nobody
                   </Typography>
-                )}
+                )} */}
 
                 {!isEditable ? (
                   <>

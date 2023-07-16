@@ -60,7 +60,7 @@ const SignInSide = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3000/auth", {
+      const response = await axios.post("https://afourthanhackthon.onrender.com/auth", {
         email,
         password,
       });
