@@ -29,7 +29,7 @@ const Library = () => {
       };
 
       try {
-        const response = await axios.get("https://afourthanhackthon.onrender.com/books");
+        const response = await axios.get("http://localhost:3000/books");
         setStatistics(response?.data);
         console.log(response?.data?.data);
         setTotalBooks(response.data.data?.length);
@@ -50,7 +50,7 @@ const Library = () => {
     const fetchStudentName = async (studentId) => {
       try {
         const response = await axios.get(
-          `https://afourthanhackthon.onrender.com/students/${studentId}`
+          `http://localhost:3000/students/${studentId}`
         );
         const { name } = response.data.student;
         setStudentNames((prevNames) => ({
@@ -126,12 +126,14 @@ const Library = () => {
                       : "Not Allocated"}
                   </TableCell>
                   <TableCell>
-  {row.isAllocated ? new Date(row.dueDate).toLocaleDateString(undefined, {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  }) : "Not Allocated"}
-</TableCell>
+                    {row.isAllocated
+                      ? new Date(row.dueDate).toLocaleDateString(undefined, {
+                          year: "numeric",
+                          month: "2-digit",
+                          day: "2-digit",
+                        })
+                      : "Not Allocated"}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -144,7 +146,6 @@ const Library = () => {
               Books Search
             </a>
           </div>
-          
         </React.Fragment>
       </div>
     </div>

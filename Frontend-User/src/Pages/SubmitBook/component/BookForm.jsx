@@ -58,7 +58,14 @@ const BookForm = () => {
     event.preventDefault();
     setSubmitClicked(true);
 
-    if (!title || !author || !description || !bookCode || !genre || !imageFile) {
+    if (
+      !title ||
+      !author ||
+      !description ||
+      !bookCode ||
+      !genre ||
+      !imageFile
+    ) {
       setErrorMessage("Please fill in all the fields.");
       setErrorField(true);
       return;
@@ -74,7 +81,7 @@ const BookForm = () => {
       formData.append("imageUrl", imageFile);
 
       const response = await axios.post(
-        "https://afourthanhackthon.onrender.com/books/addBook",
+        "http://localhost:3000/books/addBook",
         formData,
         {
           headers: {
@@ -94,7 +101,7 @@ const BookForm = () => {
         setBookCode("");
         setGenre("");
         setImageFile(null);
-        setSubmitClicked(false)
+        setSubmitClicked(false);
       } else {
         setErrorMessage("Error occurred while adding the book.");
         setSeverity("error");
@@ -179,7 +186,9 @@ const BookForm = () => {
           value={description}
           onChange={handleDescriptionChange}
           error={submitClicked && !description}
-          helperText={submitClicked && !description && "Description is required"}
+          helperText={
+            submitClicked && !description && "Description is required"
+          }
         />
         <TextField
           margin="normal"
@@ -232,7 +241,6 @@ const BookForm = () => {
   );
 };
 
-BookForm.propTypes={
-}
+BookForm.propTypes = {};
 
 export default BookForm;

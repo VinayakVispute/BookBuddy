@@ -43,6 +43,12 @@ const bookSchema = new mongoose.Schema({
     type: Date,
     default: null,
   },
+  currentAllocations: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "AllocationLog" },
+  ],
+  allocationHistory: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "AllocationLog" },
+  ],
 });
 
 module.exports = mongoose.model("Book", bookSchema);

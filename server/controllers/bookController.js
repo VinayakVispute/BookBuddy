@@ -1,6 +1,11 @@
 const Book = require("../models/bookModel");
 require("dotenv").config();
 const cloudinary = require("cloudinary").v2;
+const {isFileTypeSupported,uploadFileToCloudinary} = require('../utils/cloudinary')
+
+
+
+
 const getAllBooks = async (req, res) => {
   try {
     const books = await Book.find();
@@ -158,20 +163,8 @@ const newBook = await Book.create({
   }
 };
 
-function isFileTypeSupported(type, supportedTypes) {
-  return supportedTypes.includes(type);
-}
 
-async function uploadFileToCloudinary(file, folder, quality) {
-  const options = { folder };
 
-  if (quality) {
-    options.quality = quality;
-  }
-
-  options.resource_type = "auto";
-  return await cloudinary.uploader.upload(file.tempFilePath, options);
-}
 
 module.exports = {
   getAllBooks,

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Book = require("./models/bookModel");
+const Book = require("../models/bookModel");
 
 require("dotenv").config();
 // MongoDB connection URI

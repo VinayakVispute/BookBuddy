@@ -7,7 +7,7 @@ const BookItems = () => {
 
   useEffect(() => {
     // Fetch the books from the API
-    fetch("https://afourthanhackthon.onrender.com/books")
+    fetch("http://localhost:3000/books")
       .then((response) => response.json())
       .then((data) => setBooks(data.data))
       .catch((error) => console.log(error));
@@ -18,10 +18,12 @@ const BookItems = () => {
   };
 
   const filteredBooks = books.filter((book) => {
-    const searchTermWithoutSpaces = searchTerm.replace(/\s+/g, "").toLowerCase();
+    const searchTermWithoutSpaces = searchTerm
+      .replace(/\s+/g, "")
+      .toLowerCase();
     const bookTitleWithoutSpaces = book.title.replace(/\s+/g, "").toLowerCase();
     const bookCodeWithoutSpaces = book.code.replace(/\s+/g, "").toLowerCase();
-    
+
     return (
       bookTitleWithoutSpaces.includes(searchTermWithoutSpaces) ||
       bookCodeWithoutSpaces.includes(searchTermWithoutSpaces)

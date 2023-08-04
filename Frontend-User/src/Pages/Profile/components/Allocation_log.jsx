@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 function Allocation_log({ user }) {
   const [allocatedBooks, setAllocatedBooks] = useState([]);
@@ -12,7 +12,9 @@ function Allocation_log({ user }) {
   useEffect(() => {
     const fetchAllocatedBooks = async () => {
       try {
-        const response = await axios.get(`https://afourthanhackthon.onrender.com/books/allocated/${Studentid}`);
+        const response = await axios.get(
+          `http://localhost:3000/books/allocated/${Studentid}`
+        );
         setAllocatedBooks(response.data);
       } catch (error) {
         console.error("Error fetching allocated books:", error);
@@ -81,7 +83,10 @@ function Allocation_log({ user }) {
                     const isDueDatePassed = currentDate > dueDate;
 
                     return (
-                      <tr key={book._id} className={isDueDatePassed ? "bg-red-500" : ""}>
+                      <tr
+                        key={book._id}
+                        className={isDueDatePassed ? "bg-red-500" : ""}
+                      >
                         <td className="py-2">{book.title}</td>
                         <td className="py-2">{dueDate.toLocaleDateString()}</td>
                         <td className="py-2">
@@ -109,7 +114,7 @@ function Allocation_log({ user }) {
   );
 }
 
-Allocation_log.propTypes={
+Allocation_log.propTypes = {
   user: PropTypes.string.isRequired,
-}
+};
 export default Allocation_log;

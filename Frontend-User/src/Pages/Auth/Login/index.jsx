@@ -60,7 +60,7 @@ const SignInSide = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://afourthanhackthon.onrender.com/auth", {
+      const response = await axios.post("http://localhost:3000/auth", {
         email,
         password,
       });
@@ -91,146 +91,145 @@ const SignInSide = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen">
-    <div className="h-[100%] my-auto">
-      {errorField ? (
-        <Alert
-          onClose={handleClose}
-          message={message}
-          severity={severity}
-          sx={{ mb: 2 }}
-        />
-      ) : null}
-      <ThemeProvider theme={theme}>
-        <Grid container component="main" sx={{ height: "100%" }}>
-          <CssBaseline />
-          <Grid
-            item
-            xs={false}
-            sm={4}
-            md={7}
-            sx={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/AFourathon/d2jluylot5h9k13jrloh)",
-              backgroundRepeat: "no-repeat",
-              backgroundColor: (t) =>
-                t.palette.mode === "light"
-                  ? t.palette.grey[50]
-                  : t.palette.grey[900],
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+      <div className="h-[100%] my-auto">
+        {errorField ? (
+          <Alert
+            onClose={handleClose}
+            message={message}
+            severity={severity}
+            sx={{ mb: 2 }}
           />
-          <Grid
-            item
-            xs={12}
-            sm={8}
-            md={5}
-            component={Paper}
-            elevation={6}
-            square
-          >
-            <Box
+        ) : null}
+        <ThemeProvider theme={theme}>
+          <Grid container component="main" sx={{ height: "100%" }}>
+            <CssBaseline />
+            <Grid
+              item
+              xs={false}
+              sm={4}
+              md={7}
               sx={{
-                my: 8,
-                mx: 4,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                backgroundImage:
+                  "url(https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/AFourathon/d2jluylot5h9k13jrloh)",
+                backgroundRepeat: "no-repeat",
+                backgroundColor: (t) =>
+                  t.palette.mode === "light"
+                    ? t.palette.grey[50]
+                    : t.palette.grey[900],
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
+            />
+            <Grid
+              item
+              xs={12}
+              sm={8}
+              md={5}
+              component={Paper}
+              elevation={6}
+              square
             >
-              <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-                <ElectricBoltIcon />
-              </Avatar>
-              <Typography
-                component="h1"
-                variant="h5"
+              <Box
                 sx={{
-                  fontFamily: "Azonix, sans-serif",
+                  my: 8,
+                  mx: 4,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}
               >
-                Sign in
-              </Typography>
-
-              <Box
-                component="form"
-                noValidate
-                onSubmit={handleSubmit}
-                sx={{ mt: 1 }}
-              >
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="email"
-                  label="Username/Email"
-                  name="email"
-                  autoFocus
-                  autoComplete="off"
-                  value={email}
-                  onChange={handleChangeEmail}
-                  error={error !== null} // Set the error prop based on whether there is an error message
-                  helperText={error} // Display the error message
-                />
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type={showPassword ? "text" : "password"}
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={handleClickShowPassword}
-                          edge="end"
-                        >
-                          {showPassword ? <VisibilityOff /> : <Visibility />}
-                        </IconButton>
-                      </InputAdornment>
-                    ),
+                <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+                  <ElectricBoltIcon />
+                </Avatar>
+                <Typography
+                  component="h1"
+                  variant="h5"
+                  sx={{
+                    fontFamily: "Azonix, sans-serif",
                   }}
-                />
-                <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label="Remember me"
-                />
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
                 >
-                  Log In
-                </Button>
-                <Grid container>
-                  <Grid item xs>
-                    <Link href="#" variant="body2">
-                      Forgot password?
-                    </Link>
-                  </Grid>
-                </Grid>
-                      dont have an account?       
-                      <Link
-                      href="/Register"
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2, ml: 2 }}
-                >
-                  Sign In
-                </Link>
-              </Box>
-            </Box>
-          </Grid>
-        </Grid>
-      </ThemeProvider>
-    </div>
+                  Sign in
+                </Typography>
 
+                <Box
+                  component="form"
+                  noValidate
+                  onSubmit={handleSubmit}
+                  sx={{ mt: 1 }}
+                >
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Username/Email"
+                    name="email"
+                    autoFocus
+                    autoComplete="off"
+                    value={email}
+                    onChange={handleChangeEmail}
+                    error={error !== null} // Set the error prop based on whether there is an error message
+                    helperText={error} // Display the error message
+                  />
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type={showPassword ? "text" : "password"}
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={handleClickShowPassword}
+                            edge="end"
+                          >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                          </IconButton>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                  <FormControlLabel
+                    control={<Checkbox value="remember" color="primary" />}
+                    label="Remember me"
+                  />
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2 }}
+                  >
+                    Log In
+                  </Button>
+                  <Grid container>
+                    <Grid item xs>
+                      <Link href="#" variant="body2">
+                        Forgot password?
+                      </Link>
+                    </Grid>
+                  </Grid>
+                  dont have an account?
+                  <Link
+                    href="/Register"
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2, ml: 2 }}
+                  >
+                    Sign In
+                  </Link>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </ThemeProvider>
+      </div>
     </div>
   );
 };

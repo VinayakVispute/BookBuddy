@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import StudentCard from './StudentCard'
+import StudentCard from "./StudentCard";
 
 function StudentItems() {
   const [students, setStudents] = useState([]);
@@ -15,7 +15,7 @@ function StudentItems() {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get("https://afourthanhackthon.onrender.com/students");
+      const response = await axios.get("http://localhost:3000/students");
       setStudents(response.data.students);
       setLoading(false);
     } catch (error) {
@@ -29,10 +29,16 @@ function StudentItems() {
   };
 
   const filteredStudents = students.filter((student) => {
-    const searchTermWithoutSpaces = searchTerm.replace(/\s+/g, "").toLowerCase();
-    const studentNameWithoutSpaces = student.name.replace(/\s+/g, "").toLowerCase();
-    const studentIDWithoutSpaces = student.studentID.replace(/\s+/g, "").toLowerCase();
-    
+    const searchTermWithoutSpaces = searchTerm
+      .replace(/\s+/g, "")
+      .toLowerCase();
+    const studentNameWithoutSpaces = student.name
+      .replace(/\s+/g, "")
+      .toLowerCase();
+    const studentIDWithoutSpaces = student.studentID
+      .replace(/\s+/g, "")
+      .toLowerCase();
+
     return (
       studentNameWithoutSpaces.includes(searchTermWithoutSpaces) ||
       studentIDWithoutSpaces.includes(searchTermWithoutSpaces)

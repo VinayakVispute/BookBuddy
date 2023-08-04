@@ -41,13 +41,11 @@ const BookDetailPage = () => {
     genre: "Book Genre",
     isAllocated: false,
     allocatedTo: [],
-    imageUrl:"",
+    imageUrl: "",
   });
 
   const { Bookid } = useParams();
   const navigate = useNavigate();
-
-
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -65,10 +63,10 @@ const BookDetailPage = () => {
     event.preventDefault();
 
     try {
-      console.log(bookData)
+      console.log(bookData);
       // Make a POST request to update the book data
       const response = await axios.put(
-        `https://afourthanhackthon.onrender.com/books/${bookData.id}`,
+        `http://localhost:3000/books/${bookData.id}`,
         bookData
       );
 
@@ -91,7 +89,7 @@ const BookDetailPage = () => {
     try {
       // Make a DELETE request to delete the book
       const response = await axios.delete(
-        `https://afourthanhackthon.onrender.com/books/${bookData.id}`
+        `http://localhost:3000/books/${bookData.id}`
       );
       console.log("Book deleted:", response.data);
 
@@ -109,8 +107,10 @@ const BookDetailPage = () => {
   useEffect(() => {
     const fetchBookData = async () => {
       try {
-        const response = await axios.get(`https://afourthanhackthon.onrender.com/books/${Bookid}`);
-        console.log(response.data)
+        const response = await axios.get(
+          `http://localhost:3000/books/${Bookid}`
+        );
+        console.log(response.data);
         const book = response.data;
 
         if (!book) {
@@ -121,7 +121,7 @@ const BookDetailPage = () => {
           navigate("/404");
           return;
         }
-        console.log(book.data.title)
+        console.log(book.data.title);
         setBookData({
           id: book.data._id,
           title: book.data.title,
@@ -131,14 +131,14 @@ const BookDetailPage = () => {
           genre: book.data.genre,
           isAllocated: book.data.isAllocated,
           allocatedTo: book.data.allocatedTo,
-          imageUrl : book.data.imageUrl
+          imageUrl: book.data.imageUrl,
         });
         console.log(bookData);
       } catch (error) {
         console.error("Error retrieving book details:", error);
-             setIsEditable(false);
-      setMessage("Book Not Found ...");
-      setSeverity("error");
+        setIsEditable(false);
+        setMessage("Book Not Found ...");
+        setSeverity("error");
         setError(error);
       }
     };
@@ -171,9 +171,14 @@ const BookDetailPage = () => {
               justifyContent: "center",
             }}
           >
-            
-            <div className="bg-cover! bg-no-repeat" style={{ backgroundImage: `url(${bookData.imageUrl})`, height: 375, width: 375 }}></div>
-
+            <div
+              className="bg-cover! bg-no-repeat"
+              style={{
+                backgroundImage: `url(${bookData.imageUrl})`,
+                height: 375,
+                width: 375,
+              }}
+            ></div>
           </Grid>
 
           <Grid
@@ -196,7 +201,7 @@ const BookDetailPage = () => {
             >
               <LibraryBooksIcon sx={{ m: 1, bgcolor: "secondary.main" }} />
               <Typography component="h1" variant="h5">
-             Book Details
+                Book Details
               </Typography>
               <form noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
                 <TextField
@@ -225,21 +230,21 @@ const BookDetailPage = () => {
                     setBookData({ ...bookData, author: e.target.value })
                   }
                 />
-<TextField
-  margin="normal"
-  required
-  fullWidth
-  multiline   // Set multiline to true
-  rows={4}    // Adjust the number of visible rows
-  disabled={!isEditable}
-  id="description"
-  name="description"
-  autoComplete="off"
-  value={bookData.description}
-  onChange={(e) =>
-    setBookData({ ...bookData, description: e.target.value })
-  }
-/>
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  multiline // Set multiline to true
+                  rows={4} // Adjust the number of visible rows
+                  disabled={!isEditable}
+                  id="description"
+                  name="description"
+                  autoComplete="off"
+                  value={bookData.description}
+                  onChange={(e) =>
+                    setBookData({ ...bookData, description: e.target.value })
+                  }
+                />
 
                 <TextField
                   margin="normal"
@@ -316,14 +321,15 @@ const BookDetailPage = () => {
                       Update
                     </Button>
                   </>
-                ) : (<div className="flex justify-evenly">
-                  <Button variant="contained" type="submit">
-                    Submit
-                  </Button>
-                  <Button
+                ) : (
+                  <div className="flex justify-evenly">
+                    <Button variant="contained" type="submit">
+                      Submit
+                    </Button>
+                    <Button
                       variant="contained"
                       // endIcon={<CloudUploadIcon />}
-                      onClick={handleUpdateClick }
+                      onClick={handleUpdateClick}
                     >
                       Back
                     </Button>
