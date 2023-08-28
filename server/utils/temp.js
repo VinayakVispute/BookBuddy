@@ -5,7 +5,9 @@ require("dotenv").config();
 // MongoDB connection URI
 const mongoURI = process.env.MONGO_URI;
 // Connect to MongoDB
-mongoose.connect(mongoURI, {
+MONGO_URI =
+  "mongodb+srv://VinayakVispute:Admin%402023@nodejsexpressjsprojects.pbdp0vj.mongodb.net/Hackathon?retryWrites=true&w=majority";
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -13,114 +15,50 @@ mongoose.connect(mongoURI, {
 // Create an array of dummy books
 const BooksData = [
   {
-    title: "Book 1",
-    author: "Author 1",
-    description: "Description 1",
-    code: "B001",
-    genre: "Genre 1",
-    isAllocated: false,
-    allocatedTo: null,
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    description: "A novel about the American Dream's unattainability.",
+    code: "GATSBY001",
+    genre: "Classic",
     imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
+      "https://res.cloudinary.com/djqjag779/image/upload/v1689330471/Books/jrqemgrsexhah0saladb.jpg",
   },
   {
-    title: "Book 2",
-    author: "Author 2",
-    description: "Description 2",
-    code: "B002",
-    genre: "Genre 2",
-    isAllocated: false,
-    allocatedTo: null,
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    description:
+      "A story of racial injustice and moral growth in the American South.",
+    code: "MOCKING001",
+    genre: "Classic",
     imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
+      "https://res.cloudinary.com/djqjag779/image/upload/v1689330471/Books/jrqemgrsexhah0saladb.jpg",
   },
   {
-    title: "Book 3",
-    author: "Author 3",
-    description: "Description 3",
-    code: "B003",
-    genre: "Genre 3",
-    isAllocated: false,
-    allocatedTo: null,
+    title: "1984",
+    author: "George Orwell",
+    description: "A dystopian novel exploring the dangers of totalitarianism.",
+    code: "1984001",
+    genre: "Science Fiction",
     imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
+      "https://res.cloudinary.com/djqjag779/image/upload/v1689330471/Books/jrqemgrsexhah0saladb.jpg",
   },
   {
-    title: "Book 4",
-    author: "Author 4",
-    description: "Description 4",
-    code: "B004",
-    genre: "Genre 1",
-    isAllocated: false,
-    allocatedTo: null,
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    description: "A classic novel about love, marriage, and social manners.",
+    code: "PRIDE001",
+    genre: "Romance",
     imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
+      "https://res.cloudinary.com/djqjag779/image/upload/v1689330471/Books/jrqemgrsexhah0saladb.jpg",
   },
   {
-    title: "Book 5",
-    author: "Author 5",
-    description: "Description 5",
-    code: "B005",
-    genre: "Genre 2",
-    isAllocated: false,
-    allocatedTo: null,
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    description: "A coming-of-age novel about teenage angst and alienation.",
+    code: "CATCHER001",
+    genre: "Modern Classic",
     imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
-  },
-  {
-    title: "Book 6",
-    author: "Author 6",
-    description: "Description 6",
-    code: "B006",
-    genre: "Genre 3",
-    isAllocated: false,
-    allocatedTo: null,
-    imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
-  },
-  {
-    title: "Book 7",
-    author: "Author 7",
-    description: "Description 7",
-    code: "B007",
-    genre: "Genre 1",
-    isAllocated: false,
-    allocatedTo: null,
-    imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
-  },
-  {
-    title: "Book 8",
-    author: "Author 8",
-    description: "Description 8",
-    code: "B008",
-    genre: "Genre 2",
-    isAllocated: false,
-    allocatedTo: null,
-    imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
-  },
-  {
-    title: "Book 9",
-    author: "Author 9",
-    description: "Description 9",
-    code: "B009",
-    genre: "Genre 3",
-    isAllocated: false,
-    allocatedTo: null,
-    imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
-  },
-  {
-    title: "Book 10",
-    author: "Author 10",
-    description: "Description 10",
-    code: "B010",
-    genre: "Genre 1",
-    isAllocated: false,
-    allocatedTo: null,
-    imageUrl:
-      "https://res.cloudinary.com/djqjag779/image/upload/f_auto,q_auto/v1/Books/jrqemgrsexhah0saladb",
+      "https://res.cloudinary.com/djqjag779/image/upload/v1689330471/Books/jrqemgrsexhah0saladb.jpg",
   },
 ];
 

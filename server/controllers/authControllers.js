@@ -49,7 +49,7 @@ const signup = async (req, res) => {
       email,
       password: hashedPassword,
       phoneNumber,
-      imageUrl: file?(response.secure_url):(null),
+      imageUrl: file ? response.secure_url : null,
     });
 
     return res.status(200).json({
@@ -146,7 +146,29 @@ const login = async (req, res) => {
   }
 };
 
+const logout = (req, res) => {
+  try {
+    const options = {
+      expires: new Date(Date.now() - 1),
+      httpOnly: true,
+      withCredentials: true,
+    };
+
+    res.clearCookie("token", options).status(200).json({
+      success: true,
+      message: "User logged out successfully",
+    });
+  } catch (error) {
+    console.error("Error logging out:", error);
+    res.status(500).json({
+      success: false,
+      message: "Logout failure",
+    });
+  }
+};
+
 module.exports = {
   signup,
   login,
+  logout,
 };

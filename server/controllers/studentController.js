@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const response = (req, res) => {
-  console.log(req);
+  console.clear();
   res.send("Done");
 };
 

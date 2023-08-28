@@ -1,13 +1,31 @@
-const {
-        deallocateBookFromStudent,
-        allocateBookToStudent,getAllBooksAllocatedByStudent
-} = require('../controllers/allocationController')
-
-const express = require("express")
+const express = require("express");
 const router = express.Router();
 
-router.post('/:bookId/deallocate/:studentId',deallocateBookFromStudent).post('/:bookId/allocate/:studentId', allocateBookToStudent);
-router.get("/allocated/:studentId",getAllBooksAllocatedByStudent)
+const {
+  allocateBookToStudent,
+  returnBookByStudent,
+  getPastAllocatedBooksByStudentId,
+  getCurrentAllocatedBooksByStudentId,
+  getAllAllocationHistoryByStudentId,
+} = require("../controllers/allocationHistoryController");
 
+// Allocate a book to a student
+router.post("/allocate/:studentId/:bookId", allocateBookToStudent);
+
+// Return a book by a student
+router.post("/return/:studentId/:bookId", returnBookByStudent);
+router.get(
+  "/allocation-history/:studentId",
+  getAllAllocationHistoryByStudentId
+);
+
+// Get currently allocated books for a student
+router.get(
+  "/current-allocations/:studentId",
+  getCurrentAllocatedBooksByStudentId
+);
+
+// Get past allocated books for a student
+router.get("/past-allocations/:studentId", getPastAllocatedBooksByStudentId);
 
 module.exports = router;
