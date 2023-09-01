@@ -11,7 +11,13 @@ const fileUpload = require("express-fileupload");
 const cloudinary = require("./db/cloudinary");
 // const allocationRoutes = require("./routes/allocationRoutes");
 require("dotenv").config();
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+
+    credentials: true,
+  })
+);
 
 // Middleware
 app.use(express.json());
