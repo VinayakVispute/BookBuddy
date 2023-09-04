@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { AuthContext } from "../Pages/Auth/AuthContext";
 import logo from "../assets/images/BookBuddyIcon.png";
 import avatar from "../assets/icons/avatar.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const { token, isLoggedIn, logout, user } = useContext(AuthContext);
+  const { isLoggedIn, logout, user } = useContext(AuthContext);
 
   // Initialize profileImage with the default avatar
   const profileImage = user?.imageUrl || avatar;
@@ -86,14 +87,16 @@ function Navbar() {
             </>
           ) : (
             <>
-              <button
+              <Link
                 type="button"
+                to="/Auth"
                 className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
               >
                 Login In
-              </button>
-              <button
+              </Link>
+              <Link
                 type="button"
+                to="/Register"
                 className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
               >
                 <svg
@@ -106,7 +109,7 @@ function Navbar() {
                   <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z" />
                 </svg>
                 Register
-              </button>
+              </Link>
             </>
           )}
           <button

@@ -13,8 +13,9 @@ import {
   Dashboard,
 } from "./Pages";
 import { Footer, Navbar } from "./Componenets";
-import DashboardNavBar from "./Pages/Dashboard/components/DashboardNavBar";
+import DashboardNavBar from "./Componenets/DashboardNavBar";
 import Home from "./Pages/Home";
+import { Temp } from "./Componenets";
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
 
           <Route path="Profile" element={<Profile />} />
         </Route>
+      </Routes>
+      <Routes>
+        <Route path="/Temp" element={<Temp />} />
       </Routes>
     </>
   );

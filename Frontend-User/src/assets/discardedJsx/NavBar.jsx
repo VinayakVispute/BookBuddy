@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../Pages/Auth/AuthContext";
 import logo from "../assets/images/BookBuddyIcon.png";
 import avatar from "../assets/icons/avatar.svg";
-
+import { NavLink } from "react-router-dom";
 function Navbar() {
   const { token, isLoggedIn, logout, user } = useContext(AuthContext);
 
@@ -93,8 +93,8 @@ function Navbar() {
           ) : (
             <>
               <button
-                type="button"
                 className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
+                href="/Auth"
               >
                 Login In
               </button>
