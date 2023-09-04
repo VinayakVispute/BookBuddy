@@ -16,9 +16,16 @@ function AuthProvider(props) {
 
   useEffect(() => {
     const storedToken = getTokenFromLocalStorage();
-    if (storedToken) {
+    const storedUser = localStorage.getItem("user");
+
+    if (storedToken && storedUser) {
       setIsLoggedIn(true);
       setToken(storedToken);
+      setUser(JSON.parse(storedUser));
+    } else {
+      setIsLoggedIn(false);
+      setToken(null);
+      setUser(null);
     }
   }, []);
 
@@ -26,16 +33,24 @@ function AuthProvider(props) {
     console.log("setting token");
     setIsLoggedIn(true);
     setToken(jwtToken);
-    setUser(user);
+
     // Save the token to localStorage
     saveTokenToLocalStorage(jwtToken);
+
+    // Save the user object to localStorage
+    localStorage.setItem("user", JSON.stringify(user));
+
+    setUser(user);
   };
+
   const logout = () => {
     setIsLoggedIn(false);
     setToken(null);
+    setUser(null);
 
-    // Clear the token from localStorage
+    // Clear the token and user data from localStorage
     localStorage.removeItem("authToken");
+    localStorage.removeItem("user");
   };
 
   const value = {

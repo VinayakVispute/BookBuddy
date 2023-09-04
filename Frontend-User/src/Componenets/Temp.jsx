@@ -1,105 +1,134 @@
-import React, { useState } from "react";
-import axios from "axios";
+// import { Dropdown, Navbar } from "flowbite-react";
+// import { Avatar } from "flowbite-react";
+// export default function NavbarWithDropdown() {
+//   return (
+//     <>
+//       <Navbar fluid rounded>
+//         <Navbar.Brand href="https://flowbite-react.com">
+//           <img
+//             alt="Flowbite React Logo"
+//             className="mr-3 h-6 sm:h-9"
+//             src="/favicon.svg"
+//           />
+//           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+//             Flowbite React
+//           </span>
+//         </Navbar.Brand>
+//         <div className="flex md:order-2">
+//           <Dropdown
+//             inline
+//             label={
+//               <Avatar
+//                 alt="User settings"
+//                 img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+//                 rounded
+//               />
+//             }
+//           >
+//             <Dropdown.Header>
+//               <span className="block text-sm">Bonnie Green</span>
+//               <span className="block truncate text-sm font-medium">
+//                 name@flowbite.com
+//               </span>
+//             </Dropdown.Header>
+//             <li>
+//               <a
+//                 href="#"
+//                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+//               >
+//                 Settings
+//               </a>
+//             </li>
+//           </Dropdown>
+//           <Navbar.Toggle />
+//         </div>
+//         <Navbar.Collapse>
+//           <Navbar.Link active href="#">
+//             <p>Home</p>
+//           </Navbar.Link>
+//           <Navbar.Link href="#">About</Navbar.Link>
+//           <Navbar.Link href="#">Services</Navbar.Link>
+//           <Navbar.Link href="#">Pricing</Navbar.Link>
+//           <Navbar.Link href="#">Contact</Navbar.Link>
+//         </Navbar.Collapse>
+//       </Navbar>
+//       <button
+//         id="dropdownInformationButton"
+//         data-dropdown-toggle="dropdownInformation"
+//         className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+//         type="button"
+//       >
+//         Dropdown header{" "}
+//         <svg
+//           className="w-2.5 h-2.5 ml-2.5"
+//           aria-hidden="true"
+//           xmlns="http://www.w3.org/2000/svg"
+//           fill="none"
+//           viewBox="0 0 10 6"
+//         >
+//           <path
+//             stroke="currentColor"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             strokeWidth={2}
+//             d="m1 1 4 4 4-4"
+//           />
+//         </svg>
+//       </button>
+//       {/* Dropdown menu */}
+//       <div
+//         id="dropdownInformation"
+//         className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+//       >
+//         <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+//           <div>Bonnie Green</div>
+//           <div className="font-medium truncate">name@flowbite.com</div>
+//         </div>
+//         <ul
+//           className="py-2 text-sm text-gray-700 dark:text-gray-200"
+//           aria-labelledby="dropdownInformationButton"
+//         >
+//           <li>
+//             <a
+//               href="#"
+//               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+//             >
+//               Dashboard
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="#"
+//               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+//             >
+//               Settings
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="#"
+//               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+//             >
+//               Earnings
+//             </a>
+//           </li>
+//         </ul>
+//         <div className="py-2">
+//           <a
+//             href="#"
+//             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+//           >
+//             Sign out
+//           </a>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+import React from "react";
 
-function App() {
-  const [studentID, setStudentID] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [imageFile, setImageFile] = useState(null);
-  const [message, setMessage] = useState("");
+const Temp = () => {
+  return <div></div>;
+};
 
-  const handleFileChange = (e) => {
-    setImageFile(e.target.files[0]);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    formData.append("studentID", studentID);
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("password", password);
-    formData.append("phoneNumber", phoneNumber);
-    formData.append("imageFile", imageFile);
-
-    try {
-      const response = await axios.post(
-        "http://localhost:3000/auth/register",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-
-      setMessage(response.data.message);
-    } catch (error) {
-      console.error(error);
-      setMessage("Something went wrong");
-    }
-  };
-
-  return (
-    <div>
-      <h1>Student Signup</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Student ID:</label>
-          <input
-            type="text"
-            value={studentID}
-            onChange={(e) => setStudentID(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Phone Number:</label>
-          <input
-            type="text"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Profile Image:</label>
-          <input
-            type="file"
-            onChange={handleFileChange}
-            accept="image/jpeg, image/png"
-          />
-        </div>
-        <button type="submit">Sign Up</button>
-      </form>
-      <p>{message}</p>
-    </div>
-  );
-}
-
-export default App;
+export default Temp;

@@ -1,11 +1,6 @@
-import Books_log from './components/Books_log'
+import React from "react";
+const Dashboard = () => {
+  return <div></div>;
+};
 
-function Dashboard() {
-  return (
-    <div>
-        <Books_log/>
-    </div>
-  )
-}
-
-export default Dashboard
+export default Dashboard;
