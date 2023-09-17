@@ -17,51 +17,58 @@ import DashboardNavBar from "./Componenets/DashboardNavBar";
 import Home from "./Pages/Home";
 import { Temp } from "./Componenets";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <Router basename="/">
+      {/* Render Navbar if DashboardNavBar is not present */}
+      {!isDashboardRoute() && <Navbar />}
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth/*" element={<AuthRoutes />} />
         <Route
-          path="/"
+          path="/dashboard/*"
           element={
-            <>
-              <Navbar />
-              <Outlet />
-              <Footer />
-            </>
+            <main className="md:ml-60  h-screen bg-white dark:bg-gray-900">
+              <DashboardRoutes />
+            </main>
           }
-        >
-          <Route index element={<Home />} />
-          <Route path="/Auth" element={<Login />} />
-          <Route path="/Register" element={<UserRegister />} />
-        </Route>
-        <Route
-          path="/Dashboard"
-          element={
-            <>
-              <DashboardNavBar />
-            </>
-          }
-        >
-          <Route index element={<Dashboard />} />
-          <Route path="Auth" element={<Login />} />
-
-          <Route path="Profile" element={<Profile />} />
-        </Route>
+        />
       </Routes>
-      <Routes>
-        <Route path="/Temp" element={<Temp />} />
-      </Routes>
-    </>
+    </Router>
   );
-}
+};
+
+const isDashboardRoute = () => {
+  // Determine if the current route is a Dashboard route
+  const currentPath = window.location.pathname;
+  return currentPath.startsWith("/dashboard");
+};
+
+const AuthRoutes = () => {
+  return (
+    <div>
+      {/* Your Auth-related routes */}
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<UserRegister />} />
+        <Route path="/admin" element={<AdminRegister />} />
+      </Routes>
+    </div>
+  );
+};
+
+const DashboardRoutes = () => {
+  return (
+    <div>
+      <DashboardNavBar />{" "}
+      {/* DashboardNavBar for /dashboard and /dashboard/profile routes */}
+      {/* Your Dashboard-related routes */}
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </div>
+  );
+};
 
 export default App;
-{
-  /* <Route exact path="/Register" element={<UserRegister />} />
-        <Route exact path="/Register/Admin" element={<AdminRegister />} />
-        <Route exact path="/Student" element={<Profile />}></Route>
-      </Routes>
-      <Footer />
-    </div> */
-}

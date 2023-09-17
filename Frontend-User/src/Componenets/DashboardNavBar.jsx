@@ -193,8 +193,8 @@ const DashboardNavBar = () => {
           </ul>
           <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/dashboard/Profile"
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
               >
                 <svg
@@ -212,7 +212,7 @@ const DashboardNavBar = () => {
                   />
                 </svg>
                 <span className="ml-3">Profile</span>
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -260,9 +260,6 @@ const DashboardNavBar = () => {
           </ul>
         </div>
       </aside>
-      <main className="md:ml-60 h-auto bg-white dark:bg-gray-900">
-        <Outlet />
-      </main>
     </>
   );
 };

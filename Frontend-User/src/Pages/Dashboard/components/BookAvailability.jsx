@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import BookAvailabilityCard from "./BookAvailabilityCard";
 const BookAvailability = () => {
-  const [isSearched, setIsSearched] = useState(false);
+  const [isSearched, setIsSearched] = useState(true);
   return (
     <div>
-      <section className="bg-gray-50 dark:bg-gray-900 h-screen flex items-center">
+      <section className="flex">
         <div className="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
           {/* Start coding here */}
           <div className="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
