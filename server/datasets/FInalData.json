@@ -1,0 +1,1706 @@
+﻿[
+  {
+    "title": "Autobiography",
+    "author": "Benjamin Franklin",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000001",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7163111M-M.jpg"
+  },
+  {
+    "title": "Trump",
+    "author": "Donald Trump",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000002",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2407396M-M.jpg"
+  },
+  {
+    "title": "My place",
+    "author": "Sally Morgan",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000003",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2039282M-M.jpg"
+  },
+  {
+    "title": "Persepolis",
+    "author": "Marjane Satrapi",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000004",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL39067201M-M.jpg"
+  },
+  {
+    "title": "Eleanor Roosevelt: Vol. 1, 1884-1933",
+    "author": "Blanche Wiesen Cook",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000005",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2407238M-M.jpg"
+  },
+  {
+    "title": "Fun a velt vos iz nishto mer",
+    "author": "Israel Joshua Singer",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000006",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22877017M-M.jpg"
+  },
+  {
+    "title": "Laterna magica",
+    "author": "Ingmar Bergman",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000007",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL15222756M-M.jpg"
+  },
+  {
+    "title": "Bluebeard: a novel",
+    "author": "Kurt Vonnegut",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000008",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL21380109M-M.jpg"
+  },
+  {
+    "title": "Jimi Hendrix",
+    "author": "Sharon Lawrence",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000009",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26806770M-M.jpg"
+  },
+  {
+    "title": "Across China on foot",
+    "author": "Edwin John Dingle",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000010",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL23267346M-M.jpg"
+  },
+  {
+    "title": "Lady sings the blues",
+    "author": "Billie Holiday",
+    "description": "An autobiography is a self-written book that tells the life story of the author, sharing their experiences, challenges, and personal insights.",
+    "code": "AB000011",
+    "genre": "autobiography",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL3179429M-M.jpg"
+  },
+  {
+    "title": "Guess How Much I Love You",
+    "author": "Sam McBratney",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000001",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22362179M-M.jpg"
+  },
+  {
+    "title": "Goodnight Moon, 60th Anniversary Edition",
+    "author": "Margaret Wise Brown",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000002",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL15353628M-M.jpg"
+  },
+  {
+    "title": "Cricket in Times Square",
+    "author": "George Selden",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000003",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24204364M-M.jpg"
+  },
+  {
+    "title": "Mouse Tales",
+    "author": "Arnold Lobel",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000004",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL5296557M-M.jpg"
+  },
+  {
+    "title": "The Napping House (La Casa Adormecida)",
+    "author": "Audrey Wood",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000005",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1270569M-M.jpg"
+  },
+  {
+    "title": "Good Night Gorilla",
+    "author": "Peggy Rathmann",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000006",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1725270M-M.jpg"
+  },
+  {
+    "title": "Piggies",
+    "author": "Don Wood",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000007",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24368813M-M.jpg"
+  },
+  {
+    "title": "Ten, nine, eight",
+    "author": "Molly Bang",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000008",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL21617395M-M.jpg"
+  },
+  {
+    "title": "The snowman",
+    "author": "Raymond Briggs",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000009",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24754536M-M.jpg"
+  },
+  {
+    "title": "Biscuit",
+    "author": "Alyssa Satin Capucilli",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000010",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7292452M-M.jpg"
+  },
+  {
+    "title": "Guess How Much I Love You",
+    "author": "Sam McBratney",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000011",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL40208661M-M.jpg"
+  },
+  {
+    "title": "I Want My Potty",
+    "author": "Tony Ross",
+    "description": "Bedtime books are stories designed for children to read or be read to before they go to sleep, with soothing narratives and illustrations to help them relax and prepare for bedtime.",
+    "code": "BT000012",
+    "genre": "bedtime",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22411119M-M.jpg"
+  },
+  {
+    "title": "Chemical Biology in Regenerative Medicine",
+    "author": "Charles C. Hong",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00001",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27557847M-M.jpg"
+  },
+  {
+    "title": "Hex",
+    "author": "Rhiannon Lassiter",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00002",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28137027M-M.jpg"
+  },
+  {
+    "title": "Secret Family",
+    "author": "David Bodanis",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00003",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL668990M-M.jpg"
+  },
+  {
+    "title": "Bone Quantitative Ultrasound",
+    "author": "Pascal Laugier",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00004",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34513584M-M.jpg"
+  },
+  {
+    "title": "Mathematical methods and models in the biological sciences",
+    "author": "Martin Eisen",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00005",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL20735462M-M.jpg"
+  },
+  {
+    "title": "The scientists behind living things",
+    "author": "Robert Snedden",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00006",
+    "genre": "biology",
+    "imageUrl": "https://archive.org/services/img/scientistsbehind0000sned_a6d5"
+  },
+  {
+    "title": "Biological oceanography",
+    "author": "Carol M. Lalli",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00007",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1716614M-M.jpg"
+  },
+  {
+    "title": "Integrated fish farming",
+    "author": "Workshop on Integrated Fish Farming (199...",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00008",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL680897M-M.jpg"
+  },
+  {
+    "title": "The Serengeti lion",
+    "author": "George B. Schaller",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00009",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22099135M-M.jpg"
+  },
+  {
+    "title": "Biological Membranes",
+    "author": "Dennis Chapman",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00010",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL10071220M-M.jpg"
+  },
+  {
+    "title": "Advanced biology",
+    "author": "J. Simpkins",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00011",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL11248460M-M.jpg"
+  },
+  {
+    "title": "Student dictionary of biology",
+    "author": "Gray, Peter",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00012",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL5410262M-M.jpg"
+  },
+  {
+    "title": "Biological Investigations",
+    "author": "Edward Devine",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00013",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL8005233M-M.jpg"
+  },
+  {
+    "title": "Life Cycles",
+    "author": "Linda Buellis",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00014",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27410582M-M.jpg"
+  },
+  {
+    "title": "My First Body Book",
+    "author": "Clive Gifford",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00015",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL39658054M-M.jpg"
+  },
+  {
+    "title": "Heads, Shoulders, Muscles, and Bones",
+    "author": "Alix Wood",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00016",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL39655773M-M.jpg"
+  },
+  {
+    "title": "Simple life forms",
+    "author": "Darlene R. Stille",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00017",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL11514105M-M.jpg"
+  },
+  {
+    "title": "Functional Metabolism",
+    "author": "Kenneth B. Storey",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00018",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL18216469M-M.jpg"
+  },
+  {
+    "title": "Single molecule analysis",
+    "author": "Erwin J. G. Peterman",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00019",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25546818M-M.jpg"
+  },
+  {
+    "title": "Transfer RNA in protein synthesis",
+    "author": "Dolph L. Hatfield",
+    "description": "Biology books are educational texts that explore the science of life. They cover topics such as genetics, evolution, ecology, and the study of living organisms. These books provide insights into the structure, function, and interconnectedness of life forms on Earth. They are essential resources for students, researchers, and anyone interested in understanding the natural world.",
+    "code": "BIO00020",
+    "genre": "biology",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1703087M-M.jpg"
+  },
+  {
+    "title": "Economics of agricultural development",
+    "author": "George W. Norton",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000001",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24574871M-M.jpg"
+  },
+  {
+    "title": "International economics: theory and policy",
+    "author": "Paul R. Krugman",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000002",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL21600444M-M.jpg"
+  },
+  {
+    "title": "Consumer behavior",
+    "author": "Del I. Hawkins",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000003",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL3512399M-M.jpg"
+  },
+  {
+    "title": "Adam Smith Review",
+    "author": "Fonna Forman",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000004",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28805252M-M.jpg"
+  },
+  {
+    "title": "Tax for Australians for dummies",
+    "author": "Jimmy B. Prince",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000005",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25544115M-M.jpg"
+  },
+  {
+    "title": "Plan your estate",
+    "author": "Denis Clifford",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000006",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL18200731M-M.jpg"
+  },
+  {
+    "title": "Ethics, law and society",
+    "author": "Jennifer Gunning",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000007",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28334982M-M.jpg"
+  },
+  {
+    "title": "Ecotourism",
+    "author": "David A. Fennell",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000008",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28784923M-M.jpg"
+  },
+  {
+    "title": "Advanced accounting",
+    "author": "Floyd A. Beams",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000009",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL4402905M-M.jpg"
+  },
+  {
+    "title": "The world economy",
+    "author": "David Greenaway",
+    "description": "Business and economics books are educational resources that delve into the realms of commerce, finance, management, and economic theories. They offer valuable insights for students, professionals, and those interested in understanding how businesses work and the functioning of economies.",
+    "code": "BE000010",
+    "genre": "business__economics",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27096314M-M.jpg"
+  },
+  {
+    "title": "Test your entrepreneurial I.Q.",
+    "author": "K. Hawkins",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000001",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL10215099M-M.jpg"
+  },
+  {
+    "title": "Women and entrepreneurship",
+    "author": "Candida G. Brush",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000002",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL11912123M-M.jpg"
+  },
+  {
+    "title": "Management and Entrepreneurism (Smart Strategies)",
+    "author": "John Chicken",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000003",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL8630300M-M.jpg"
+  },
+  {
+    "title": "Unsung Heroes of the American Industry",
+    "author": "Mark Poirier",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000004",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7962247M-M.jpg"
+  },
+  {
+    "title": "World Encyclopedia Of Entrepreneurship",
+    "author": "Leo Paul Dana",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000005",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25987351M-M.jpg"
+  },
+  {
+    "title": "Entrepreneurship",
+    "author": "Paul H. Wilken",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000006",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL4402820M-M.jpg"
+  },
+  {
+    "title": "Principles of Business",
+    "author": "Salem Press",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000007",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL37277307M-M.jpg"
+  },
+  {
+    "title": "Entrepreneurial wit & wisdom",
+    "author": "Robert L. Qualls",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000008",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2102362M-M.jpg"
+  },
+  {
+    "title": "Creating a Culture of Innovation",
+    "author": "Alexandra Deschamps-Sonsino",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000009",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL31935680M-M.jpg"
+  },
+  {
+    "title": "The Effective Entrepreneur - a practical guide to leadership and management of others and self",
+    "author": "John Caines",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000010",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL12294967M-M.jpg"
+  },
+  {
+    "title": "24 Carat Bold The Standard For Real Thought Leaders",
+    "author": "Mindy Gibbins-Klein",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000011",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26072937M-M.jpg"
+  },
+  {
+    "title": "International handbook of research on indigenous entrepreneurship",
+    "author": "Leo Paul Dana",
+    "description": "An entrepreneurship book provides guidance and knowledge for individuals interested in starting, growing, or managing their own businesses. These books cover various aspects of entrepreneurship, including business planning, marketing, funding, and leadership. They offer practical advice, case studies, and strategies to help aspiring entrepreneurs succeed in the world of business.",
+    "code": "ES000012",
+    "genre": "entrepreneurship",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL11906794M-M.jpg"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00001",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28345239M-M.jpg"
+  },
+  {
+    "title": "The Magic of Oz: a faithful record of the remarkable adventures of Dorothy and Trot and the Wizard of Oz, together with the Cowardly Lion, the Hungry Tiger and Cap'n Bill, in their successful search for a magical and beautiful birthday present for Princess Ozma of Oz",
+    "author": "L. Frank Baum",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00002",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL13447442M-M.jpg"
+  },
+  {
+    "title": "Prince Caspian",
+    "author": "C. S. Lewis",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00003",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL9222276M-M.jpg"
+  },
+  {
+    "title": "The Marvelous Land of Oz: Being an Account of the Further Adventures of the Scarecrow and the Tin Woodman",
+    "author": "L. Frank Baum",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00004",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7077661M-M.jpg"
+  },
+  {
+    "title": "The hill of dreams",
+    "author": "Arthur Machen",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00005",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7166875M-M.jpg"
+  },
+  {
+    "title": "The princess and the goblin",
+    "author": "George MacDonald",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00006",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL48581846M-M.jpg"
+  },
+  {
+    "title": "Sylvie and Bruno",
+    "author": "Lewis Carroll",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00007",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7245466M-M.jpg"
+  },
+  {
+    "title": "The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00008",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL31879906M-M.jpg"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00009",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL5237526M-M.jpg"
+  },
+  {
+    "title": "The Enchanted Castle",
+    "author": "Edith Nesbit",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00010",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22879417M-M.jpg"
+  },
+  {
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00011",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL15350842M-M.jpg"
+  },
+  {
+    "title": "The Napoleon of Notting Hill",
+    "author": "Gilbert Keith Chesterton",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00012",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL23365952M-M.jpg"
+  },
+  {
+    "title": "The Horse and His Boy",
+    "author": "C. S. Lewis",
+    "description": "Fantasy books are works of fiction set in imaginative and often magical worlds. They typically feature elements such as mythical creatures, supernatural powers, and epic adventures. These books offer readers an escape from reality into fantastical realms filled with unique characters and imaginative settings, making them popular for entertainment and exploration of complex themes through allegory and metaphor.",
+    "code": "FAN00013",
+    "genre": "fantasy",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL29546376M-M.jpg"
+  },
+  {
+    "title": "Witch Wood",
+    "author": "John Buchan",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000001",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22367516M-M.jpg"
+  },
+  {
+    "title": "The Path of the King",
+    "author": "John Buchan",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000002",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL6641029M-M.jpg"
+  },
+  {
+    "title": "In the days of Drake",
+    "author": "Joseph Smith Fletcher",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000003",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL6977359M-M.jpg"
+  },
+  {
+    "title": "The great shadow",
+    "author": "Arthur Conan Doyle",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000004",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL46835356M-M.jpg"
+  },
+  {
+    "title": "The free fishers",
+    "author": "John Buchan",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000005",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32994503M-M.jpg"
+  },
+  {
+    "title": "Children of the Frost",
+    "author": "Jack London",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000006",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34892321M-M.jpg"
+  },
+  {
+    "title": "To Have and To Hold",
+    "author": "Mary Johnston",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000007",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32446157M-M.jpg"
+  },
+  {
+    "title": "Three Musketeers",
+    "author": "Alexandre Dumas",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000008",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34885136M-M.jpg"
+  },
+  {
+    "title": "Midwinter: certain travellers in old England",
+    "author": "John Buchan",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000009",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL6656313M-M.jpg"
+  },
+  {
+    "title": "The last days of Pompeii",
+    "author": "Edward Bulwer Lytton, Baron Lytton",
+    "description": "Historical fiction books are novels set in a specific historical period or featuring real historical events. They blend factual elements with imaginative storytelling to create captivating narratives that transport readers to the past. These books offer a unique way to learn about history while enjoying compelling characters and stories that reflect the time and place in which they are set.",
+    "code": "HF000010",
+    "genre": "historical_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26553266M-M.jpg"
+  },
+  {
+    "title": "The Damned",
+    "author": "Algernon Blackwood",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000001",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL11824017M-M.jpg"
+  },
+  {
+    "title": "The Power of Darkness",
+    "author": "Edith Nesbit",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000002",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL8914289M-M.jpg"
+  },
+  {
+    "title": "Tales of Terror and Mystery",
+    "author": "Arthur Conan Doyle",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000003",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24221283M-M.jpg"
+  },
+  {
+    "title": "The Beetle",
+    "author": "Richard Marsh",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000004",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24325876M-M.jpg"
+  },
+  {
+    "title": "The Eye of Osiris: A Detective Story",
+    "author": "R. Austin Freeman",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000005",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL35742699M-M.jpg"
+  },
+  {
+    "title": "Uncle Silas: a tale of Bartram-Haugh",
+    "author": "Joseph Sheridan Le Fanu",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000006",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7115788M-M.jpg"
+  },
+  {
+    "title": "The Island of Dr. Moreau",
+    "author": "H. G. Wells",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000007",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7038266M-M.jpg"
+  },
+  {
+    "title": "Poems",
+    "author": "Percy Bysshe Shelley",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000008",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL14034906M-M.jpg"
+  },
+  {
+    "title": "Carrie",
+    "author": "Stephen King",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000009",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL29484574M-M.jpg"
+  },
+  {
+    "title": "Misery",
+    "author": "Stephen King",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000010",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32364524M-M.jpg"
+  },
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000011",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22312685M-M.jpg"
+  },
+  {
+    "title": "Interview With the Vampire",
+    "author": "Anne Rice",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000012",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL9592757M-M.jpg"
+  },
+  {
+    "title": "House on the Borderland",
+    "author": "William Hope Hodgson",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000013",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL44129748M-M.jpg"
+  },
+  {
+    "title": "Salem's Lot",
+    "author": "Stephen King",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000014",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28273194M-M.jpg"
+  },
+  {
+    "title": "Pet Sematary",
+    "author": "Stephen King",
+    "description": "Horror books are a genre of literature that aims to evoke fear, suspense, and a sense of dread in readers. They often feature elements of the supernatural, the macabre, or psychological terror. Horror books can range from classic tales like \"Dracula\" by Bram Stoker to contemporary works like Stephen King's \"The Shining.\" They are designed to entertain and thrill readers with spine-chilling narratives and unsettling themes.",
+    "code": "HO000015",
+    "genre": "horror",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL33965435M-M.jpg"
+  },
+  {
+    "title": "Remains, historical & literary, connected with the palatine counties of Lancaster and Chester",
+    "author": "Chetham Society, Manchester, Eng.",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00001",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7062724M-M.jpg"
+  },
+  {
+    "title": "Eugenics and Other Evils",
+    "author": "Gilbert Keith Chesterton",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00002",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24174140M-M.jpg"
+  },
+  {
+    "title": "Das SchloÃŸ",
+    "author": "Franz Kafka",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00003",
+    "genre": "literature",
+    "imageUrl": "https://archive.org/services/img/castle01kafk"
+  },
+  {
+    "title": "The Street of Seven Stars",
+    "author": "Mary Roberts Rinehart",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00004",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25555545M-M.jpg"
+  },
+  {
+    "title": "The uncommercial traveller",
+    "author": "Charles Dickens",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00005",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL39909877M-M.jpg"
+  },
+  {
+    "title": "Paul et Virginie",
+    "author": "Bernardin de Saint-Pierre",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00006",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24239564M-M.jpg"
+  },
+  {
+    "title": "The Talmud of Babylonia",
+    "author": "Jacob Neusner",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00007",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL12024654M-M.jpg"
+  },
+  {
+    "title": "Martin Eden",
+    "author": "Jack London",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00008",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25311903M-M.jpg"
+  },
+  {
+    "title": "The Evil Shepherd",
+    "author": "Edward Phillips Oppenheim",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00009",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7114756M-M.jpg"
+  },
+  {
+    "title": "Paradiso",
+    "author": "Dante Alighieri",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00010",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL17990685M-M.jpg"
+  },
+  {
+    "title": "El conde Lucanor",
+    "author": "Don Juan Manuel",
+    "description": "Literature books encompass a wide range of fictional and non-fictional works that explore human experiences, emotions, and cultural themes. They often prioritize literary quality and artistic expression.",
+    "code": "LIT00011",
+    "genre": "literature",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25671101M-M.jpg"
+  },
+  {
+    "title": "PMP Project Management Professional Exam Certification Kit",
+    "author": "Kim Heldman",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00001",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27370539M-M.jpg"
+  },
+  {
+    "title": "Principles of emergency management and emergency operations centers (EOC)",
+    "author": "Michael J. Fagel",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00002",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL25572655M-M.jpg"
+  },
+  {
+    "title": "Managing and Marketing Tourist Destinations",
+    "author": "Metin Kozak",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00003",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28769707M-M.jpg"
+  },
+  {
+    "title": "Further up the organisation",
+    "author": "Townsend, Robert",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00004",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2408368M-M.jpg"
+  },
+  {
+    "title": "Tolley's Handbook of Disaster and Emergency Management",
+    "author": "Tony Moore",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00005",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7477553M-M.jpg"
+  },
+  {
+    "title": "Advances in Production Management Systems. Competitive Manufacturing for Innovative Products and Services",
+    "author": "Christos Emmanouilidis",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00006",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28017035M-M.jpg"
+  },
+  {
+    "title": "Essentials of Human Resource Management",
+    "author": "Shaun Tyson",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00007",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28741334M-M.jpg"
+  },
+  {
+    "title": "Fundamentals of Human Resource Management",
+    "author": "Robert N. Lussier",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00008",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27435248M-M.jpg"
+  },
+  {
+    "title": "Range management",
+    "author": "Jerry Holechek",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00009",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2046080M-M.jpg"
+  },
+  {
+    "title": "Data mining",
+    "author": "Jiawei Han",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00010",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL39485339M-M.jpg"
+  },
+  {
+    "title": "Concerning children",
+    "author": "Charlotte Perkins Gilman",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00011",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24186015M-M.jpg"
+  },
+  {
+    "title": "Educational administration: theory, research, and practice",
+    "author": "Wayne K. Hoy",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00012",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL4269773M-M.jpg"
+  },
+  {
+    "title": "Risk avoidance for the building team",
+    "author": "Basil Sawczuk",
+    "description": "Management books provide insights and strategies for effective leadership, organizational development, and business management, aimed at helping professionals enhance their management skills.",
+    "code": "MAN00013",
+    "genre": "management",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1015800M-M.jpg"
+  },
+  {
+    "title": "Introducing Computers",
+    "author": "Robert H. Blissmer",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000001",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7619398M-M.jpg"
+  },
+  {
+    "title": "The C Programming Language",
+    "author": "Brian W. Kernighan",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000002",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL21056987M-M.jpg"
+  },
+  {
+    "title": "Big Java",
+    "author": "Cay S. Horstmann",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000003",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22371298M-M.jpg"
+  },
+  {
+    "title": "Java software solutions",
+    "author": "Lewis, John",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000004",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24211287M-M.jpg"
+  },
+  {
+    "title": "Your Office",
+    "author": "Amy Kinser",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000005",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28774186M-M.jpg"
+  },
+  {
+    "title": "C++",
+    "author": "Herbert Schildt",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000006",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22270308M-M.jpg"
+  },
+  {
+    "title": "Glencoe Keyboarding Connections",
+    "author": "McGraw-Hill",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000007",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7309382M-M.jpg"
+  },
+  {
+    "title": "Learning Perl",
+    "author": "Randal L. Schwartz",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000008",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1204776M-M.jpg"
+  },
+  {
+    "title": "Criminal justice internships",
+    "author": "Gary R. Gordon",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000009",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2229366M-M.jpg"
+  },
+  {
+    "title": "Advances in visual computing",
+    "author": "George Bebis",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000010",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL9056158M-M.jpg"
+  },
+  {
+    "title": "Unix System V/386 Release 4",
+    "author": "American Telephone and Telegraph Company",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000011",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL9300144M-M.jpg"
+  },
+  {
+    "title": "Unlimited power",
+    "author": "Anthony Robbins",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000012",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL2717011M-M.jpg"
+  },
+  {
+    "title": "Unix System V Release 4: Programmer's Guide",
+    "author": "American Telephone and Telegraph Company",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000013",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1982849M-M.jpg"
+  },
+  {
+    "title": "Unix System V Release 4",
+    "author": "American Telephone and Telegraph Company",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000014",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL9300017M-M.jpg"
+  },
+  {
+    "title": "Learning Python",
+    "author": "Mark Lutz",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000015",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL6804857M-M.jpg"
+  },
+  {
+    "title": "Core Java 2.",
+    "author": "Cay S. Horstmann",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000016",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL16957240M-M.jpg"
+  },
+  {
+    "title": "IEEE standard for information technology",
+    "author": "Institute of Electrical and Electronics ...",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000017",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22193901M-M.jpg"
+  },
+  {
+    "title": "Starting Out with C++",
+    "author": "Tony Gaddis",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000018",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28185242M-M.jpg"
+  },
+  {
+    "title": "Pascal",
+    "author": "Douglas W. Nance",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000019",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL1111849M-M.jpg"
+  },
+  {
+    "title": "DOS",
+    "author": "Kris A. Jamsa",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000020",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL20957659M-M.jpg"
+  },
+  {
+    "title": "Departmental report",
+    "author": "Great Britain. Department of Health",
+    "description": "Programming books are educational resources that teach computer programming languages, coding techniques, and software development concepts for programmers and developers.",
+    "code": "PG000021",
+    "genre": "programming",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL39208726M-M.jpg"
+  },
+  {
+    "title": "One Scandalous Christmas Eve",
+    "author": "Susan Stephens",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000001",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32280448M-M.jpg"
+  },
+  {
+    "title": "The Texan's Truth",
+    "author": "Jolene Navarro",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000002",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32291636M-M.jpg"
+  },
+  {
+    "title": "A Plan for Her Future",
+    "author": "Lois Richer",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000003",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32396861M-M.jpg"
+  },
+  {
+    "title": "His Dry Creek Legacy",
+    "author": "Janet Tronstad",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000004",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32643695M-M.jpg"
+  },
+  {
+    "title": "Keeping Faith",
+    "author": "Hannah Alexander",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000005",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL29671811M-M.jpg"
+  },
+  {
+    "title": "Marlie's mystery man",
+    "author": "Doris Rangel",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000006",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL3386627M-M.jpg"
+  },
+  {
+    "title": "The Italian's Baby",
+    "author": "Lucy Gordon",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000007",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL10280126M-M.jpg"
+  },
+  {
+    "title": "My Name Is Nell",
+    "author": "Laura Abbot",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000008",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL3387747M-M.jpg"
+  },
+  {
+    "title": "The Raven and the Rose",
+    "author": "Susan Wiggs",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000009",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7286800M-M.jpg"
+  },
+  {
+    "title": "Hero's Sweetheart",
+    "author": "Cheryl Wyatt",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000010",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL29724569M-M.jpg"
+  },
+  {
+    "title": "Proof of Their Forbidden Night",
+    "author": "Chantelle Shaw",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000011",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32442131M-M.jpg"
+  },
+  {
+    "title": "Demanding His Billion-Dollar Heir",
+    "author": "Pippa Roscoe",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000012",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32312533M-M.jpg"
+  },
+  {
+    "title": "Marrying His Runaway Heiress",
+    "author": "Therese Beharrie",
+    "description": "Romance books focus on love, relationships, and emotional connections between characters. They often include themes of passion, desire, and romantic adventures.",
+    "code": "RO000013",
+    "genre": "romance",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32335342M-M.jpg"
+  },
+  {
+    "title": "Star Wars - Darth Maul - Shadow Hunter",
+    "author": "Michael Reaves",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000001",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL6800224M-M.jpg"
+  },
+  {
+    "title": "Excession",
+    "author": "Iain M. Banks",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000002",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL993155M-M.jpg"
+  },
+  {
+    "title": "The Warrior Apprentice",
+    "author": "Lois McMaster Bujold",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000003",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7661251M-M.jpg"
+  },
+  {
+    "title": "The ugly little boy",
+    "author": "Isaac Asimov",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000004",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL47807155M-M.jpg"
+  },
+  {
+    "title": "Counter-clock world",
+    "author": "Philip K. Dick",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000005",
+    "genre": "science_fiction",
+    "imageUrl": "https://archive.org/services/img/counterclockworl00dick_264"
+  },
+  {
+    "title": "Soldier, Ask Not",
+    "author": "Gordon R. Dickson",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000006",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7526660M-M.jpg"
+  },
+  {
+    "title": "Star Wars - Jedi Academy Trilogy - Jedi Search",
+    "author": "Kevin J. Anderson",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000007",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7826772M-M.jpg"
+  },
+  {
+    "title": "Nightfall and Other Stories",
+    "author": "Isaac Asimov",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000008",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL42541705M-M.jpg"
+  },
+  {
+    "title": "The Windup Girl",
+    "author": "Paolo Bacigalupi",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000009",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26502506M-M.jpg"
+  },
+  {
+    "title": "Alas, Babylon",
+    "author": "Pat Frank",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000010",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7824330M-M.jpg"
+  },
+  {
+    "title": "Fevre Dream",
+    "author": "George R. R. Martin",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000011",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL3488071M-M.jpg"
+  },
+  {
+    "title": "Star Wars - Splinter of the Mind's Eye",
+    "author": "Alan Dean Foster",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000012",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL4558013M-M.jpg"
+  },
+  {
+    "title": "Star Trek - Triangle",
+    "author": "Sondra Marshak",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000013",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24956103M-M.jpg"
+  },
+  {
+    "title": "On Basilisk Station",
+    "author": "David Weber",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000014",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24966311M-M.jpg"
+  },
+  {
+    "title": "The Peripheral",
+    "author": "William F. Gibson",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000015",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27164773M-M.jpg"
+  },
+  {
+    "title": "The Ballad of Songbirds and Snakes",
+    "author": "Suzanne Collins",
+    "description": "Science fiction books explore imaginative and speculative concepts often set in futuristic or otherworldly settings. They delve into scientific, technological, and societal what-ifs.",
+    "code": "SF000016",
+    "genre": "science_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28122267M-M.jpg"
+  },
+  {
+    "title": "Finding Ecohappiness",
+    "author": "Sandi Schwartz",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000001",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34142220M-M.jpg"
+  },
+  {
+    "title": "Connecting the Dots",
+    "author": "Sean Heritage",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000002",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34133035M-M.jpg"
+  },
+  {
+    "title": "Living with Hypospadias",
+    "author": "John Filippelli",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000003",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34224446M-M.jpg"
+  },
+  {
+    "title": "Lemons of Life",
+    "author": "Ismael Lara",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000004",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL34273581M-M.jpg"
+  },
+  {
+    "title": "The Checklist Book",
+    "author": "Alexandra Franzen",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000005",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL33098588M-M.jpg"
+  },
+  {
+    "title": "Clear your past",
+    "author": "Lynne D. Finney",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000006",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL705894M-M.jpg"
+  },
+  {
+    "title": "El Plan del Cisne",
+    "author": "Nely Galan",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000007",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL9236256M-M.jpg"
+  },
+  {
+    "title": "Woman's Book of Strength",
+    "author": "Sue Patton Thoele",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000008",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL35162018M-M.jpg"
+  },
+  {
+    "title": "Upside Down Zen",
+    "author": "Susan Murphy",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000009",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL8308561M-M.jpg"
+  },
+  {
+    "title": "Enneagram",
+    "author": "Tina Madison",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000010",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL35288913M-M.jpg"
+  },
+  {
+    "title": "It's All About Control",
+    "author": "Randy W. McDonald",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000011",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL36661788M-M.jpg"
+  },
+  {
+    "title": "Let's Start a Luvolution",
+    "author": "Southern Stardove",
+    "description": "Self-help books offer advice, strategies, and guidance for personal development, self-improvement, and achieving personal goals and well-being.",
+    "code": "SH000012",
+    "genre": "self-help",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL36661792M-M.jpg"
+  },
+  {
+    "title": "The Kill Artist",
+    "author": "Daniel Silva",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000001",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL6791595M-M.jpg"
+  },
+  {
+    "title": "The Solomon Curse",
+    "author": "Clive Cussler",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000002",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26605178M-M.jpg"
+  },
+  {
+    "title": "Floating City: a Nicholas Linnear novel",
+    "author": "Eric Van Lustbader",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000003",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL22384088M-M.jpg"
+  },
+  {
+    "title": "The visitation",
+    "author": "Frank E. Peretti",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000004",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL36813M-M.jpg"
+  },
+  {
+    "title": "Marnie",
+    "author": "Winston Graham",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000005",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL5800295M-M.jpg"
+  },
+  {
+    "title": "Adrenaline",
+    "author": "Jeff Abbott",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000006",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28190712M-M.jpg"
+  },
+  {
+    "title": "Hades",
+    "author": "Russell Andrews",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000007",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28989142M-M.jpg"
+  },
+  {
+    "title": "Don't Turn Around",
+    "author": "Jessica Barry",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000008",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL28156768M-M.jpg"
+  },
+  {
+    "title": "Girl in the Moon",
+    "author": "Terry Goodkind",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000009",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL27816742M-M.jpg"
+  },
+  {
+    "title": "The Stockholm Syndicate",
+    "author": "Colin Forbes",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000010",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL4271347M-M.jpg"
+  },
+  {
+    "title": "A Savage Adoration",
+    "author": "Penny Jordan",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000011",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24381749M-M.jpg"
+  },
+  {
+    "title": "The Genesis Code",
+    "author": "John Case",
+    "description": "Thriller books are known for their suspenseful and gripping narratives, often featuring high-stakes situations, mysteries, and intense psychological or action-packed elements.",
+    "code": "TH000012",
+    "genre": "thriller",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL672080M-M.jpg"
+  },
+  {
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00001",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32728761M-M.jpg"
+  },
+  {
+    "title": "Looking for Alaska",
+    "author": "John Green",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00002",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32769580M-M.jpg"
+  },
+  {
+    "title": "AstÃ©rix et les Goths",
+    "author": "RenÃ© Goscinny",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00003",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL10616969M-M.jpg"
+  },
+  {
+    "title": "The Hate U Give",
+    "author": "Angie Thomas",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00004",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL32466621M-M.jpg"
+  },
+  {
+    "title": "AstÃ©rix chez les HelvÃ¨tes",
+    "author": "RenÃ© Goscinny",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00005",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL24200704M-M.jpg"
+  },
+  {
+    "title": "What Katy Did Next",
+    "author": "Susan Coolidge",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00006",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7182057M-M.jpg"
+  },
+  {
+    "title": "The Lantern Bearers",
+    "author": "Rosemary Sutcliff",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00007",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL5777563M-M.jpg"
+  },
+  {
+    "title": "Turtles All the Way Down",
+    "author": "John Green",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00008",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26428769M-M.jpg"
+  },
+  {
+    "title": "Thirteen reasons Why",
+    "author": "Jay Asher",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00009",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL26387411M-M.jpg"
+  },
+  {
+    "title": "Mouthing the Words",
+    "author": "Camilla Gibb",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00010",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL3943866M-M.jpg"
+  },
+  {
+    "title": "Peach Girl vol 2",
+    "author": "Miwa Ueda",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00011",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL23066549M-M.jpg"
+  },
+  {
+    "title": "Whistle!",
+    "author": "Daisuke Higuchi",
+    "description": " Young adult fiction books are tailored to adolescent readers and tackle themes relevant to their age group, such as coming-of-age, friendship, identity, and family dynamics.",
+    "code": "YAF00012",
+    "genre": "young_adult_fiction",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL23004906M-M.jpg\n"
+  }
+]

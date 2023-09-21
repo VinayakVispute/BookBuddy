@@ -13,7 +13,11 @@ const cloudinary = require("./db/cloudinary");
 require("dotenv").config();
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5500"],
+    origin: [
+      "http://localhost:5173",
+      "http://127.0.0.1:5500",
+      "https://glittery-raindrop-63e8eb.netlify.app",
+    ],
     credentials: true,
   })
 );
