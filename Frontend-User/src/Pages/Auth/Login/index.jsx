@@ -86,7 +86,6 @@ const LoginPage = () => {
           },
           { withCredentials: true }
         );
-        console.log(response.data.success);
         const { data } = response;
         console.log("if success", data.success);
         if (data.success) {

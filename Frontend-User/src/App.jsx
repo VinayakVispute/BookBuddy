@@ -5,43 +5,45 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
-import {
-  Login,
-  Profile,
-  UserRegister,
-  AdminRegister,
-  Dashboard,
-} from "./Pages";
+import { Login, Profile, UserRegister, Dashboard } from "./Pages";
 import { Footer, Navbar } from "./Componenets";
+import NavigationBar from "./Componenets/NaviagationBar";
 import DashboardNavBar from "./Componenets/DashboardNavBar";
 import Home from "./Pages/Home";
 import { Temp } from "./Componenets";
+import BookSearch from "./Pages/BookSearch/BookSearch";
 
 const App = () => {
   return (
-    <Router basename="/">
-      {/* Render Navbar if DashboardNavBar is not present */}
-      {!isDashboardRoute() && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/auth/*" element={<AuthRoutes />} />
-        <Route
-          path="/dashboard/*"
-          element={
-            <main className="md:ml-60  h-screen bg-white dark:bg-gray-900">
-              <DashboardRoutes />
-            </main>
-          }
-        />
-      </Routes>
-    </Router>
+    <div className="bg-white dark:bg-gray-900">
+      <Router basename="/">
+        <Routes>
+          {/* Load Navbar for these routes */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Home />
+              </>
+            }
+          />
+          <Route path="/auth/*" element={<AuthRoutes />} />
+          {/* Load DashboardRoutes for /dashboard/* */}
+          <Route path="/dashboard/*" element={<DashboardRoutes />} />
+          {/* Load Navbar or DashboardNavBar based on the user's login status */}
+          <Route
+            path="/Temp"
+            element={
+              <NavigationBar>
+                <BookSearch />
+              </NavigationBar>
+            }
+          />
+        </Routes>
+      </Router>
+    </div>
   );
-};
-
-const isDashboardRoute = () => {
-  // Determine if the current route is a Dashboard route
-  const currentPath = window.location.pathname;
-  return currentPath.startsWith("/dashboard");
 };
 
 const AuthRoutes = () => {
@@ -50,8 +52,8 @@ const AuthRoutes = () => {
       {/* Your Auth-related routes */}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/register" element={<UserRegister />} />
-        <Route path="/admin" element={<AdminRegister />} />
+        {/* <Route path="/register" element={<UserRegister />} />
+        <Route path="/admin" element={<AdminRegister />} /> */}
       </Routes>
     </div>
   );
@@ -60,13 +62,15 @@ const AuthRoutes = () => {
 const DashboardRoutes = () => {
   return (
     <div>
-      <DashboardNavBar />{" "}
+      <DashboardNavBar />
       {/* DashboardNavBar for /dashboard and /dashboard/profile routes */}
       {/* Your Dashboard-related routes */}
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+      <main className="md:ml-60 h-screen bg-white dark:bg-gray-900">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </main>
     </div>
   );
 };

@@ -6,7 +6,6 @@ function AuthProvider(props) {
   const [token, setToken] = useState(null);
   const [user, setUser] = useState(null);
   const [localtoken, setlocalToken] = useState(null);
-
   const saveTokenToLocalStorage = (jwtToken) => {
     localStorage.setItem("authToken", jwtToken);
   };

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { AuthContext } from "../Pages/Auth/AuthContext";
 import logo from "../assets/images/BookBuddyIcon.png";
@@ -7,13 +7,15 @@ import avatar from "../assets/icons/avatar.svg";
 const DashboardNavBar = () => {
   const { logout, user } = useContext(AuthContext);
   const profileImage = user?.imageUrl || avatar;
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prevState) => !prevState);
+  };
 
   return (
     <>
       <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
         type="button"
         className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
@@ -38,7 +40,7 @@ const DashboardNavBar = () => {
         aria-label="Sidenav"
       >
         <div className="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-          {/*Profile Section*/}
+          {/* Profile Section */}
           <div className="text-center pb-6 text-gray-500 dark:text-gray-400">
             <img
               className="mx-auto mb-4 w-28 h-28 rounded-full"
@@ -51,7 +53,7 @@ const DashboardNavBar = () => {
             <p>{user?.studentID}</p>
           </div>
 
-          <ul className="space-y-2  border-t">
+          <ul className="space-y-2 border-t">
             <li>
               <Link
                 to="/dashboard"
@@ -74,8 +76,7 @@ const DashboardNavBar = () => {
               <button
                 type="button"
                 className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                aria-controls="dropdown-pages"
-                data-collapse-toggle="dropdown-pages"
+                onClick={toggleDropdown}
               >
                 <svg
                   aria-hidden="true"
@@ -86,7 +87,7 @@ const DashboardNavBar = () => {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7zm3 0a1 1 0 011-1h3a1 1 0 110 2h-3zm-3 4a1 1 0 011-1h.01a1 1 0 110 2H7zm3 0a1 1 0 011-1h3a1 1 0 110 2h-3z"
                     clipRule="evenodd"
                   />
                 </svg>
@@ -95,40 +96,47 @@ const DashboardNavBar = () => {
                 </span>
                 <svg
                   aria-hidden="true"
-                  className="w-6 h-6"
+                  className={`flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 ${
+                    isDropdownOpen
+                      ? "transform rotate-0"
+                      : "transform rotate-180"
+                  }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fillRule="evenodd"
+                    fillrule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
+                    cliprule="evenodd"
+                  ></path>
                 </svg>
               </button>
-              <ul id="dropdown-pages" className="hidden py-2 space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                  >
-                    Lend Book
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                  >
-                    Return Book
-                  </a>
-                </li>
-              </ul>
+              {/* Render the dropdown when isDropdownOpen is true */}
+              {isDropdownOpen && (
+                <ul id="dropdown-pages" className="py-2 space-y-2">
+                  <li>
+                    <Link
+                      to="/dashboard/lend-book"
+                      className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >
+                      Lend Book
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/dashboard/return-book"
+                      className="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    >
+                      Return Book
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/Temp"
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -144,7 +152,7 @@ const DashboardNavBar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap">
                   Search Books
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -239,7 +247,10 @@ const DashboardNavBar = () => {
             <li>
               <span
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group cursor-pointer"
-                onClick={logout}
+                onClick={() => {
+                  logout();
+                  return navigate("/");
+                }}
               >
                 <svg
                   aria-hidden="true"
@@ -254,12 +265,13 @@ const DashboardNavBar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="ml-3">Settings</span>
+                <span className="ml-3">Logout</span>
               </span>
             </li>
           </ul>
         </div>
       </aside>
+      `
     </>
   );
 };
