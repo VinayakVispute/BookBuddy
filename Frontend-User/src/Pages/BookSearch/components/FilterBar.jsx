@@ -109,8 +109,8 @@ const FilterBar = ({ onGenreChange }) => {
                   className="space-y-2 text-sm"
                   aria-labelledby="dropdownDefault"
                 >
-                  {categories?.map((category) => (
-                    <li key={category._id} className="flex items-center">
+                  {categories?.map((category,index) => (
+                    <li key={index} className="flex items-center">
                       <input
                         id={category.name}
                         type="checkbox"

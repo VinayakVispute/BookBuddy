@@ -16,32 +16,30 @@ import BookSearch from "./Pages/BookSearch/BookSearch";
 const App = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <Router basename="/">
-        <Routes>
-          {/* Load Navbar for these routes */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <Home />
-              </>
-            }
-          />
-          <Route path="/auth/*" element={<AuthRoutes />} />
-          {/* Load DashboardRoutes for /dashboard/* */}
-          <Route path="/dashboard/*" element={<DashboardRoutes />} />
-          {/* Load Navbar or DashboardNavBar based on the user's login status */}
-          <Route
-            path="/Temp"
-            element={
-              <NavigationBar>
-                <BookSearch />
-              </NavigationBar>
-            }
-          />
-        </Routes>
-      </Router>
+      <Routes>
+        {/* Load Navbar for these routes */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+        <Route path="/auth/*" element={<AuthRoutes />} />
+        {/* Load DashboardRoutes for /dashboard/* */}
+        <Route path="/dashboard/*" element={<DashboardRoutes />} />
+        {/* Load Navbar or DashboardNavBar based on the user's login status */}
+        <Route
+          path="/Temp"
+          element={
+            <NavigationBar>
+              <BookSearch />
+            </NavigationBar>
+          }
+        />
+      </Routes>
     </div>
   );
 };
@@ -50,6 +48,7 @@ const AuthRoutes = () => {
   return (
     <div>
       {/* Your Auth-related routes */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Login />} />
         {/* <Route path="/register" element={<UserRegister />} />

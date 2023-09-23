@@ -1,7 +1,9 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, } from "react";
+import { useNavigate } from "react-router-dom";
 const AuthContext = createContext();
 
 function AuthProvider(props) {
+  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
   const [user, setUser] = useState(null);
@@ -26,7 +28,7 @@ function AuthProvider(props) {
       setToken(null);
       setUser(null);
     }
-  }, []);
+  }, [navigate]);
 
   const login = (jwtToken, user) => {
     console.log("setting token");
