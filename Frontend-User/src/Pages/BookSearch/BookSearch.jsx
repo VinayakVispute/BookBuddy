@@ -3,41 +3,49 @@ import axios from "axios";
 import ReactPaginate from "react-paginate";
 import BookCard from "./components/BookCard";
 import FilterBar from "./components/FilterBar";
+import Spinner from "../../Componenets/Spinner";
 
 const BookSearch = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [dataToDisplay, setDataToDisplay] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [pageCount, setPageCount] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState(null); // Added state for selected genre
   const itemsPerPage = 8;
   const pageVisited = pageNumber * itemsPerPage;
 
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true); // Set isLoading to true when fetching data for a new page
-      try {
-        const response = await axios.get("http://localhost:3000/books");
-        const data = response.data;
-
-        if (data.success) {
-          const slicedData = data?.data?.slice(
-            pageVisited,
-            pageVisited + itemsPerPage
-          );
-          setPageCount(Math.ceil(data?.data?.length / itemsPerPage));
-          setDataToDisplay(slicedData);
-          setIsLoading(false); // Set isLoading back to false when data is available
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        setIsLoading(false); // Set isLoading to false in case of an error
-      }
-    };
     fetchData();
-  }, [pageNumber]);
+  }, [pageNumber, selectedGenre]); // Fetch data whenever page number or selected genre changes
+
+  const fetchData = async () => {
+    setIsLoading(true); // Set isLoading to true when fetching data for a new page
+    try {
+      const response = await axios.get("http://localhost:3000/books");
+      const data = response.data;
+
+      if (data.success) {
+        const slicedData = data?.data?.slice(
+          pageVisited,
+          pageVisited + itemsPerPage
+        );
+        setPageCount(Math.ceil(data?.data?.totalItems / itemsPerPage));
+        setDataToDisplay(slicedData);
+        setIsLoading(false); // Set isLoading back to false when data is available
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setIsLoading(false); // Set isLoading to false in case of an error
+    }
+  };
 
   const handlePageChange = ({ selected }) => {
     setPageNumber(selected);
+  };
+
+  const handleGenreChange = (genre) => {
+    setSelectedGenre(genre);
+    setPageNumber(0); // Reset page number to 0 when genre changes
   };
 
   return (
@@ -46,23 +54,25 @@ const BookSearch = () => {
         <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Book Available
         </h2>
-        <FilterBar />
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen">
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : (
-            dataToDisplay.map((book) => (
+        <FilterBar onGenreChange={handleGenreChange} />
+        {isLoading ? (
+          <div className=" min-h-screen flex justify-center items-center">
+            <Spinner />
+          </div>
+        ) : (
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen justify-center">
+            {dataToDisplay.map((book) => (
               <BookCard
                 key={book?.id}
                 title={book?.title}
                 author={book?.author}
                 description={book?.description}
-                genre={book?.genre}
+                genre={book?.genre?.name}
                 imageUrl={book?.imageUrl}
               />
-            ))
-          )}
-        </div>
+            ))}
+          </div>
+        )}
         <div className="w-full flex justify-center pt-16">
           <ReactPaginate
             previousLabel={"Previous"}

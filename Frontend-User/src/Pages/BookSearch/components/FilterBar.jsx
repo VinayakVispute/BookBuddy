@@ -1,11 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const FilterBar = () => {
+const FilterBar = ({ onGenreChange }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/categories");
+        const { data } = response;
+        if (data.success) {
+          setCategories(data?.data);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  // Function to toggle the dropdown menu
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prevState) => !prevState);
+  };
+
+  const handleCategoryChange = (category) => {
+    // Toggle the selected category
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories((prevCategories) =>
+        prevCategories.filter((c) => c !== category)
+      );
+    } else {
+      setSelectedCategories((prevCategories) => [...prevCategories, category]);
+    }
+  };
+
+  const applyFilters = () => {
+    onGenreChange(selectedCategories.join(","));
+    setIsDropdownOpen(false);
+  };
+
   return (
-    <div className="max-w-screen-xl px-4 mx-auto mb-16 mt-8 lg:px-12 w-full ">
-      {/* Start coding here */}
+    <div className="max-w-screen-xl px-4 mx-auto mb-16 mt-8 lg:px-12 w-full">
       <div className="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <div className="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
+        <div className="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4 relative">
           <div className="w-full md:w-1/2">
             <form className="flex items-center">
               <label htmlFor="simple-search" className="sr-only">
@@ -37,47 +77,31 @@ const FilterBar = () => {
               </div>
             </form>
           </div>
-          <div className="flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:space-y-0 md:items-center md:space-x-3">
-            <div className="flex items-center w-full space-x-3 md:w-auto">
-              <button
-                id="filterDropdownButton"
-                data-dropdown-toggle="filterDropdown"
-                className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                type="button"
+          <div className="relative group">
+            <button
+              id="filterDropdownButton"
+              onClick={toggleDropdown}
+              className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              type="button"
+            >
+              Filter
+              <svg
+                className="-mr-1 ml-1.5 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  className="w-4 h-4 mr-2 text-gray-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Filter
-                <svg
-                  className="-mr-1 ml-1.5 w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    clipRule="evenodd"
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  />
-                </svg>
-              </button>
-              {/* Dropdown menu */}
-              <div
-                id="filterDropdown"
-                className="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700"
-              >
+                <path
+                  clipRule="evenodd"
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                />
+              </svg>
+            </button>
+            {/* Dropdown menu */}
+            {isDropdownOpen && (
+              <div className="z-50 absolute mt-2 w-48 p-3 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-600 left-0">
                 <h6 className="mb-3 text-sm font-medium text-gray-900 dark:text-white">
                   Category
                 </h6>
@@ -85,66 +109,33 @@ const FilterBar = () => {
                   className="space-y-2 text-sm"
                   aria-labelledby="dropdownDefault"
                 >
-                  <li className="flex items-center">
-                    <input
-                      id="apple"
-                      type="checkbox"
-                      defaultValue=""
-                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                    />
-                    <label
-                      htmlFor="apple"
-                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
-                    >
-                      Apple (56)
-                    </label>
-                  </li>
-                  <li className="flex items-center">
-                    <input
-                      id="fitbit"
-                      type="checkbox"
-                      defaultValue=""
-                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                    />
-                    <label
-                      htmlFor="fitbit"
-                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
-                    >
-                      Fitbit (56)
-                    </label>
-                  </li>
-                  <li className="flex items-center">
-                    <input
-                      id="dell"
-                      type="checkbox"
-                      defaultValue=""
-                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                    />
-                    <label
-                      htmlFor="dell"
-                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
-                    >
-                      Dell (56)
-                    </label>
-                  </li>
-                  <li className="flex items-center">
-                    <input
-                      id="asus"
-                      type="checkbox"
-                      defaultValue=""
-                      defaultChecked=""
-                      className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                    />
-                    <label
-                      htmlFor="asus"
-                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
-                    >
-                      Asus (97)
-                    </label>
-                  </li>
+                  {categories?.map((category) => (
+                    <li key={category._id} className="flex items-center">
+                      <input
+                        id={category.name}
+                        type="checkbox"
+                        value={category._id}
+                        checked={selectedCategories.includes(category._id)}
+                        onChange={() => handleCategoryChange(category._id)}
+                        className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      />
+                      <label
+                        htmlFor={category.name}
+                        className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100"
+                      >
+                        {category.name}
+                      </label>
+                    </li>
+                  ))}
                 </ul>
+                <button
+                  onClick={applyFilters}
+                  className="mt-3 text-sm font-medium text-white bg-primary-600 border border-transparent rounded-lg active:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                >
+                  Apply Filters
+                </button>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

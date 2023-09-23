@@ -5,6 +5,7 @@ const studentRoutes = require("./routes/studentRoutes");
 const allocationRoutes = require("./routes/allocationRoutes");
 const bookRouters = require("./routes/BooksRoutes");
 const authRoutes = require("./routes/authRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 const connectDB = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const fileUpload = require("express-fileupload");
@@ -33,9 +34,8 @@ app.use(
 
 // Routes
 app.use("/", studentRoutes);
-// app.use("/books", allocationRoutes);
 app.use("/books", bookRouters);
-
+app.use("/categories", categoryRoutes);
 //authentication
 app.use("/", authRoutes);
 app.use("/", allocationRoutes);
