@@ -40,6 +40,12 @@ const DashboardNavBar = () => {
         aria-label="Sidenav"
       >
         <div className="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+          {/* Logo Section */}
+          <div className="pl-2 mb-5">
+            <Link to="/">
+              <img src={logo} className="max-w-full" />
+            </Link>
+          </div>
           {/* Profile Section */}
           <div className="text-center pb-6 text-gray-500 dark:text-gray-400">
             <img
@@ -136,7 +142,7 @@ const DashboardNavBar = () => {
             </li>
             <li>
               <Link
-                to="/Temp"
+                to="/Search"
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg

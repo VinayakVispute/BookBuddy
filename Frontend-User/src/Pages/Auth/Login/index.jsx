@@ -114,7 +114,7 @@ const LoginPage = () => {
           setTimeout(() => {
             if (data.user.role === "student") {
               // Redirect to the student route
-              navigate("/dashboard", { state: { user: data.user } });
+              navigate("/Search", { state: { user: data.user } });
             }
           }, 1000);
         } else {

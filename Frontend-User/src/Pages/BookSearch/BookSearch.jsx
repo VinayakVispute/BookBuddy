@@ -9,7 +9,7 @@ const BookSearch = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [bookData, setBookData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [pageCount, setPageCount] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
   const [selectedGenre, setSelectedGenre] = useState([]); // Added state for selected genre
   const itemsPerPage = 8;
   const pageVisited = pageNumber * itemsPerPage;
@@ -20,6 +20,7 @@ const BookSearch = () => {
     const slicedData = dummy.slice(pageVisited, pageVisited + itemsPerPage);
     setPageCount(Math.ceil(dummy.length / itemsPerPage));
     console.log(slicedData);
+
     return slicedData;
   };
 

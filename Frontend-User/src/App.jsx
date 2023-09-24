@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/dashboard/*" element={<DashboardRoutes />} />
         {/* Load Navbar or DashboardNavBar based on the user's login status */}
         <Route
-          path="/Temp"
+          path="/Search"
           element={
             <NavigationBar>
               <BookSearch />
@@ -51,8 +51,8 @@ const AuthRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Login />} />
-        {/* <Route path="/register" element={<UserRegister />} />
-        <Route path="/admin" element={<AdminRegister />} /> */}
+        <Route path="/Register" element={<UserRegister />} />
+        {/*  <Route path="/admin" element={<AdminRegister />} /> */}
       </Routes>
     </div>
   );

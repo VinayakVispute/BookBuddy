@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-
+import Spinner from "../../../Componenets/Spinner";
 const BookCard = ({ title, author, description, genre, imageUrl }) => {
   const [showMore, setShowMore] = useState(false);
-
+  const [imageLoaded, setImageLoaded] = useState(false);
   function handleShowMore() {
     setShowMore(!showMore);
+  }
+
+  function handleImageLoad() {
+    setImageLoaded(true);
   }
 
   return (
@@ -14,8 +18,16 @@ const BookCard = ({ title, author, description, genre, imageUrl }) => {
           <img
             src={imageUrl}
             alt={title}
-            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            className={`h-full w-full object-cover object-center lg:h-full lg:w-full ${
+              imageLoaded ? "" : "hidden"
+            }`}
+            onLoad={handleImageLoad}
           />
+          {!imageLoaded && (
+            <div className="w-full h-full flex items-center justify-center">
+              <Spinner />
+            </div>
+          )}
         </div>
         <div className="mt-4">
           <div>
@@ -38,7 +50,6 @@ const BookCard = ({ title, author, description, genre, imageUrl }) => {
               </div>
             </div>
           </div>
-          {/* More products... */}
         </div>
       </div>
       <button
@@ -52,7 +63,7 @@ const BookCard = ({ title, author, description, genre, imageUrl }) => {
           fill="currentColor"
           viewBox="0 0 18 21"
         >
-          <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
+          <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175/.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
         </svg>
         Lend Book
       </button>

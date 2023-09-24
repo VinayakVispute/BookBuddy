@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Auth/AuthContext";
 import avatar from "../../assets/icons/avatar.svg";
+import ProfileBackground from "../../assets/images/ProfileBackground.png";
 import editIcon from "../../assets/icons/icons8-edit.svg";
 const Profile = () => {
   const { isLoggedIn, logout, user } = useContext(AuthContext);
@@ -10,11 +11,7 @@ const Profile = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
       <div>
-        <img
-          src="https://storage.cloudconvert.com/tasks/7b91f285-e35f-4551-89e7-16143433c452/WhatsApp%20Image%202023-09-17%20at%2013.03.02.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20230917%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20230917T073612Z&X-Amz-Expires=86400&X-Amz-Signature=da8b458d341633643e419ae26b7e586456904e97113404b361908cd59f404621&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22WhatsApp%20Image%202023-09-17%20at%2013.03.02.png%22&response-content-type=image%2Fpng&x-id=GetObject"
-          alt="Profile Background"
-          width="100%"
-        />
+        <img src={ProfileBackground} alt="Profile Background" width="100%" />
         <img
           class="w-[8rem] h-[8rem] rounded-full z-40 translate-x-14 -translate-y-14"
           src={profileImage}
@@ -72,7 +69,7 @@ const Profile = () => {
           class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
         >
           <img src={editIcon} className="w-6 h-6 mr-2" />
-          Sign in with Google
+          Update Profile
         </button>
       </div>
     </div>
