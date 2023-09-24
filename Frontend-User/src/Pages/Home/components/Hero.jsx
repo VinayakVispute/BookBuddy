@@ -1,62 +1,55 @@
-import { Link } from "react-router-dom"
+import React from "react";
+import HeroSectionImage from "../../../assets/images/HeroRightSection.png";
 
-
-
-function Hero() {
+const Hero = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className=" min-h-screen flex justify-center items-center text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Unlock Infinite Literary Worlds.</h1>
-          <p className="py-6">Discover, track, and access a vast library of books with BookBuddy. Login now to explore and check availability seamlessly.</p>
-          <Link to="/Auth" className="btn btn-primary">Get Started</Link>
-          <Link to="/Auth" className="btn btn-primary mx-4">LogIn</Link>
+    <div>
+      <section className="bg-white dark:bg-gray-900">
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h1 className="mb-4  text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+              Welcome to
+              <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 ml-4">
+                BookBuddy - Library Management System
+              </span>
+            </h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+              Efficiently Manage, Organize, and Explore Your Literary Universe
+              with BookBuddy. Revolutionize the Way You Experience Your Library.
+              right!
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            >
+              Get started
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            >
+              Explore Our Books!
+            </a>
+          </div>
+          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src={HeroSectionImage} alt="mockup" />
+          </div>
         </div>
-      </div>
-      <div className="bg-gray-900 text-white py-10 px-5">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-5">Welcome to our Library Management System</h1>
-        <p className="text-lg mb-10">
-          Explore a world of knowledge at your fingertips. Our library management system offers a vast collection of books, magazines, and resources to enrich your learning experience.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div className="bg-gray-800 rounded-lg p-5 hover:shadow-lg hover:shadow-black">
-            <h2 className="text-xl font-semibold mb-2">Discover</h2>
-            <p>Browse through our extensive catalog of books and discover new authors, genres, and hidden gems.</p>
-          </div>
-          <div className="bg-gray-800 rounded-lg p-5 hover:shadow-lg hover:shadow-black">
-            <h2 className="text-xl font-semibold mb-2">Borrow</h2>
-            <p>Take advantage of our borrowing system to easily check out books and keep track of your reading list.</p>
-          </div>
-          <div className="bg-gray-800 rounded-lg p-5 hover:shadow-lg hover:shadow-black">
-            <h2 className="text-xl font-semibold mb-2">Manage</h2>
-            <p>Organize your borrowed books, set reminders for due dates, and easily renew or return items.</p>
-          </div>
-          <div className="bg-gray-800 rounded-lg p-5 hover:shadow-lg hover:shadow-black">
-            <h2 className="text-xl font-semibold mb-2">Recommendations</h2>
-            <p>Receive personalized book recommendations based on your reading preferences and interests.</p>
-          </div>
-        </div>
-        <div className="mt-20">
-          <h2 className="text-2xl font-semibold mb-5">Join our Library Community</h2>
-          <p className="text-lg mb-5">
-            Become a part of our vibrant library community and enjoy additional benefits:
-          </p>
-          <ul className="list-disc list-inside">
-            <li>Participate in book clubs and reading events</li>
-            <li>Access digital resources, including e-books and audiobooks</li>
-            <li>Connect with fellow readers and share recommendations</li>
-            <li>Receive notifications about upcoming releases and author signings</li>
-          </ul>
-          <p className="text-lg mt-5">
-            Don't miss out on the opportunity to broaden your literary horizons and immerse yourself in a world of imagination.
-          </p>
-        </div>
-      </div>
+      </section>
     </div>
-    </div>
-    
   );
-}
+};
 
 export default Hero;

@@ -19,7 +19,8 @@ const bookSchema = new mongoose.Schema({
     unique: true,
   },
   genre: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId, // Reference to Category model
+    ref: "Category",
     required: [true, "Please provide a genre."],
   },
   isAllocated: {

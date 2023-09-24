@@ -12,33 +12,37 @@ require("dotenv").config();
 const signup = async (req, res) => {
   try {
     // Get data
-    const { studentID, name, email, password, phoneNumber } = req.body;
-
-    // Check if user already exists
+    const { studentID, name, email, password, phoneNumber, imageFile } =
+      req.body;
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({
+      return res.json({
         success: false,
         message: "User already exists",
       });
     }
-
+    console.log("Here it reaches");
     // Validate and upload image
-    const file = req?.files?.imageUrl;
+    // const file = imageFile;
+    const file = req?.files?.imageFile;
+    let response = null; // Initialize response
     if (file) {
       const supportedTypes = ["jpg", "jpeg", "png"];
-      const fileType = file.name.split(".")[1].toLowerCase();
-
+      const fileType = file?.name?.split(".")[1].toLowerCase();
+      console.log(fileType);
+      console.log("Files is there");
       if (!isFileTypeSupported(fileType, supportedTypes)) {
-        return res.status(400).json({
+        return res.json({
           success: false,
           message: "File format not supported",
         });
       }
 
       console.log("Uploading to Cloudinary");
-      const response = await uploadFileToCloudinary(file, "Nishit");
+      response = await uploadFileToCloudinary(file, "Nishit");
+      console.log(response);
     }
+    console.log("This ", response);
     // Secure password
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -49,7 +53,7 @@ const signup = async (req, res) => {
       email,
       password: hashedPassword,
       phoneNumber,
-      imageUrl: file?(response.secure_url):(null),
+      imageUrl: file ? response?.secure_url : null,
     });
 
     return res.status(200).json({
@@ -74,17 +78,22 @@ const login = async (req, res) => {
     //validation on email and password
 
     if (!email && !password) {
-      return res.status(400).json({
+      console.log("!email and !pass");
+      return res.json({
         success: false,
         message: "Please provide your email and password.",
       });
     } else if (!email) {
-      return res.status(400).json({
+      console.log("!email ");
+
+      return res.json({
         success: false,
         message: "Please provide your email.",
       });
     } else if (!password) {
-      return res.status(400).json({
+      console.log("!pass ");
+
+      return res.json({
         success: false,
         message: "Please provide your password.",
       });
@@ -94,7 +103,9 @@ const login = async (req, res) => {
     let user = await User.findOne({ email });
     //if not a registered user
     if (!user) {
-      return res.status(401).json({
+      console.log("!not Registered ");
+
+      return res.json({
         success: false,
         message: "User is not Registered",
       });
@@ -112,27 +123,27 @@ const login = async (req, res) => {
       let token = jwt.sign(payload, process.env.JWT_SECRET, {
         expiresIn: "2h",
       });
-      console.log("This is token", token);
       user = user.toObject();
       user.token = token;
       user.password = undefined;
-      console.log("This is user new", typeof user);
 
       const options = {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         httpOnly: true,
         withCredentials: true,
       };
-
+      console.log("success");
       res.cookie("token", token, options).status(200).json({
+        success: true,
         httpOnly: true,
         token,
         user,
         message: "User Logged in successfully",
       });
     } else {
+      console.log("passwsord do not match");
       //passwsord do not match
-      return res.status(403).json({
+      return res.json({
         success: false,
         message: "Password Incorrect",
       });
@@ -146,7 +157,29 @@ const login = async (req, res) => {
   }
 };
 
+const logout = (req, res) => {
+  try {
+    const options = {
+      expires: new Date(Date.now() - 1),
+      httpOnly: true,
+      withCredentials: true,
+    };
+
+    res.clearCookie("token", options).status(200).json({
+      success: true,
+      message: "User logged out successfully",
+    });
+  } catch (error) {
+    console.error("Error logging out:", error);
+    res.status(500).json({
+      success: false,
+      message: "Logout failure",
+    });
+  }
+};
+
 module.exports = {
   signup,
   login,
+  logout,
 };

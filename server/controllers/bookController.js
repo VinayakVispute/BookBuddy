@@ -1,14 +1,14 @@
 const Book = require("../models/bookModel");
 require("dotenv").config();
 const cloudinary = require("cloudinary").v2;
-const {isFileTypeSupported,uploadFileToCloudinary} = require('../utils/cloudinary')
-
-
-
+const {
+  isFileTypeSupported,
+  uploadFileToCloudinary,
+} = require("../utils/cloudinary");
 
 const getAllBooks = async (req, res) => {
   try {
-    const books = await Book.find();
+    const books = await Book.find().populate("genre"); // Populate the 'genre' field with category data
     res.status(200).json({
       success: true,
       message: "Books fetched successfully",
@@ -75,7 +75,6 @@ const updateBookById = async (req, res) => {
       success: true,
       data: updatedBook,
       message: "Books Updated  successfully",
-
     });
   } catch (error) {
     console.error("Error updating book:", error);
@@ -121,7 +120,7 @@ const addBook = async (req, res) => {
     const { title, author, description, code, genre } = req.body;
 
     // Create a new book object
-    
+
     const file = req.files.imageUrl;
     const supportedTypes = ["jpg", "jpeg", "png"];
     const fileType = file.name.split(".")[1].toLowerCase();
@@ -134,24 +133,24 @@ const addBook = async (req, res) => {
     }
 
     console.log("Uploading to Cloudinary");
-    const response = await uploadFileToCloudinary(file, "Book")
-const newBook = await Book.create({
-  title,
-  author,
-  description,
-  code,
-  genre,
-  isAllocated: false,
-  allocatedTo: null,
-  imageUrl: response.secure_url,
-})
-    
+    const response = await uploadFileToCloudinary(file, "Book");
+    const newBook = await Book.create({
+      title,
+      author,
+      description,
+      code,
+      genre,
+      isAllocated: false,
+      allocatedTo: null,
+      imageUrl: response.secure_url,
+    });
+
     // Save the new book to the database
 
     return res.status(200).json({
       success: true,
       message: "Book added successfully",
-      newBook
+      newBook,
     });
   } catch (error) {
     console.error("Error adding book:", error);
@@ -162,9 +161,6 @@ const newBook = await Book.create({
     });
   }
 };
-
-
-
 
 module.exports = {
   getAllBooks,

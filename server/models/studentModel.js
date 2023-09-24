@@ -30,14 +30,12 @@ const studentSchema = new mongoose.Schema({
   imageUrl: {
     type: String,
   },
-  borrowedBooks: [{ type: mongoose.Schema.Types.ObjectId, ref: "Book" }],
-  currentAllocation: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "AllocationLog",
-    default: null,
-  },
-  allocationHistory: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "AllocationLog" },
+  currentAllocations: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "AllocationLog",
+      default: null,
+    },
   ],
 });
 

@@ -1,69 +1,77 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import {
-  Home,
-  Login,
-  Display,
-  Dashboard,
-  Profile,
-  Allocation,
-  SubmitBook,
-  DetailPage,
-  UserRegister,
-  AdminRegister,
-} from "./Pages";
-import { Footer, Navbar, Temp } from "./Componenets";
-import Book from "./Pages/Display/components/Book";
-import StudentSearch from "./Pages/StudentSearch/Display";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-function App() {
-  return (
-    <div>
-      <Router basename="/">
-        <Navbar />
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/Search" element={<StudentSearch />} />
-          <Route exact path="/Auth" element={<Login />} />
-          <Route exact path="/Register" element={<UserRegister />} />
-          <Route exact path="/Register/Admin" element={<AdminRegister />} />
-          <Route exact path="/Display" element={<Display />}></Route>
-          <Route exact path="/Temp" element={<Temp />}></Route>
-          <Route exact path="/Admin/Dashboard" element={<Dashboard />}></Route>
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
+import { Login, Profile, UserRegister, Dashboard } from "./Pages";
+import { Footer, Navbar } from "./Componenets";
+import NavigationBar from "./Componenets/NaviagationBar";
+import DashboardNavBar from "./Componenets/DashboardNavBar";
+import Home from "./Pages/Home";
+import { Temp } from "./Componenets";
+import BookSearch from "./Pages/BookSearch/BookSearch";
 
-          <Route
-            exact
-            path="/Admin/SubmitBook"
-            element={<SubmitBook />}
-          ></Route>
-          <Route
-            exact
-            path="/Student/Allocation"
-            element={<Allocation />}
-          ></Route>
-          <Route exact path="/Student" element={<Profile />}></Route>
-          <Route
-            exact
-            path="/DetailPage/:Bookid"
-            element={<DetailPage />}
-          ></Route>
-        </Routes>
-      </Router>
-      <Footer />
+const App = () => {
+  return (
+    <div className="bg-white dark:bg-gray-900">
+      <Routes>
+        {/* Load Navbar for these routes */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+        <Route path="/auth/*" element={<AuthRoutes />} />
+        {/* Load DashboardRoutes for /dashboard/* */}
+        <Route path="/dashboard/*" element={<DashboardRoutes />} />
+        {/* Load Navbar or DashboardNavBar based on the user's login status */}
+        <Route
+          path="/Temp"
+          element={
+            <NavigationBar>
+              <BookSearch />
+            </NavigationBar>
+          }
+        />
+      </Routes>
     </div>
   );
-}
+};
+
+const AuthRoutes = () => {
+  return (
+    <div>
+      {/* Your Auth-related routes */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        {/* <Route path="/register" element={<UserRegister />} />
+        <Route path="/admin" element={<AdminRegister />} /> */}
+      </Routes>
+    </div>
+  );
+};
+
+const DashboardRoutes = () => {
+  return (
+    <div>
+      <DashboardNavBar />
+      {/* DashboardNavBar for /dashboard and /dashboard/profile routes */}
+      {/* Your Dashboard-related routes */}
+      <main className="md:ml-60 h-screen bg-white dark:bg-gray-900">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </main>
+    </div>
+  );
+};
 
 export default App;
