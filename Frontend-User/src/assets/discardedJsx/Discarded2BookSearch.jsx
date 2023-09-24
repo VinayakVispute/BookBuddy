@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import BookCard from "./components/BookCard";
@@ -6,35 +6,44 @@ import FilterBar from "./components/FilterBar";
 import Spinner from "../../Componenets/Spinner";
 
 const BookSearch = () => {
+  const Thumb = useRef(null);
   const [pageNumber, setPageNumber] = useState(0);
-  const [dataToDisplay, setDataToDisplay] = useState([]);
+  // const [bookData, setBookData] = useState(null)
   const [filteredBooks, setFilteredBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [pageCount, setPageCount] = useState(null);
   const [selectedGenre, setSelectedGenre] = useState(null); // Added state for selected genre
   const itemsPerPage = 8;
+  const bookData = useRef(null);
   const pageVisited = pageNumber * itemsPerPage;
+  const filterBooks = () => {
+    const Answer = selectedGenre
+      ? bookData.current.filter((book) => {
+          if (book.genre._id === selectedGenre) {
+            return true;
+          }
+          return false;
+        })
+      : bookData.current;
+    return Answer;
+  };
+
+  const dataToDisplay = async () => {
+    const filteredBookData = await filterBooks();
+    const resultantData = await calculatePageCount(filteredBookData);
+    console.log(resultantData);
+    Thumb.current = resultantData;
+    return resultantData;
+  };
 
   useEffect(() => {
-    fetchData();
-  }, [pageNumber]);
-  useEffect(() => {
-    const Filtercall = () => {
-      const Answer = selectedGenre
-        ? dataToDisplay.filter((book) => {
-            if (book.genre._id === selectedGenre) {
-              return true;
-            }
-            return false;
-          })
-        : dataToDisplay;
-      setFilteredBooks(Answer);
-      setDataToDisplay(Answer);
-    };
-    if (selectedGenre) {
-      Filtercall();
+    alert("useEffectonMOve");
+    console.log(selectedGenre);
+    if (!selectedGenre) {
+      fetchData();
     }
-  }, [selectedGenre]);
+    dataToDisplay();
+  }, [pageNumber, selectedGenre]);
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -43,26 +52,15 @@ const BookSearch = () => {
       // Fetch all books
       const response = await axios.get("http://localhost:3000/books");
       const data = response.data;
-
+      alert("api call");
       if (data.success) {
-        // Assuming you have a selectedGenre variable representing the selected genre
-        setDataToDisplay(data?.data);
-        const filterBooks = selectedGenre
-          ? data?.data?.filter((book) =>
-              book?.genre?.name?.includes(selectedGenre)
-            )
-          : data?.data;
-        let dummmy = filterBooks;
-        setFilteredBooks(filterBooks);
-
-        const slicedData = dummmy.slice(
-          pageVisited,
-          pageVisited + itemsPerPage
-        );
-        setPageCount(Math.ceil(filteredBooks.length / itemsPerPage));
-        setDataToDisplay(slicedData);
-        setIsLoading(false);
+        bookData.current = data?.data;
+        const resultantData = await dataToDisplay();
+        setFilteredBooks(resultantData);
       }
+
+      // setDataToDisplay(slicedData);
+      setIsLoading(false);
     } catch (error) {
       console.error("Error:", error);
       setIsLoading(false);
@@ -73,8 +71,13 @@ const BookSearch = () => {
     setPageNumber(selected);
   };
 
-  const handleGenreChange = (genre) => {
+  const handleGenreChange = async (genre) => {
+    console.log("data filtered");
     setSelectedGenre(genre);
+    console.log(bookData);
+    const final = await dataToDisplay();
+    console.log(final);
+    setFilteredBooks(Thumb.current);
     setPageNumber(0); // Reset page number to 0 when genre changes
   };
 
@@ -91,7 +94,7 @@ const BookSearch = () => {
           </div>
         ) : (
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen justify-center">
-            {dataToDisplay.map((book) => (
+            {filteredBooks?.map((book) => (
               <BookCard
                 key={book?.id}
                 title={book?.title}
@@ -134,6 +137,8 @@ const BookSearch = () => {
       </div>
     </>
   );
+
+  // Functions
 };
 
 export default BookSearch;

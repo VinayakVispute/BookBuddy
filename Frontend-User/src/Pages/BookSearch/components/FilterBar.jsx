@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const FilterBar = ({ onGenreChange }) => {
+const FilterBar = ({ setSelectedGenre, setPageNumber }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [categories, setCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -28,6 +28,7 @@ const FilterBar = ({ onGenreChange }) => {
 
   const handleCategoryChange = (category) => {
     // Toggle the selected category
+    console.log(category);
     if (selectedCategories.includes(category)) {
       setSelectedCategories((prevCategories) =>
         prevCategories.filter((c) => c !== category)
@@ -38,7 +39,8 @@ const FilterBar = ({ onGenreChange }) => {
   };
 
   const applyFilters = () => {
-    onGenreChange(selectedCategories.join(","));
+    setSelectedGenre(selectedCategories);
+    setPageNumber(0);
     setIsDropdownOpen(false);
   };
 
@@ -109,8 +111,8 @@ const FilterBar = ({ onGenreChange }) => {
                   className="space-y-2 text-sm"
                   aria-labelledby="dropdownDefault"
                 >
-                  {categories?.map((category,index) => (
-                    <li key={index} className="flex items-center">
+                  {categories?.map((category) => (
+                    <li key={category._id} className="flex items-center">
                       <input
                         id={category.name}
                         type="checkbox"
