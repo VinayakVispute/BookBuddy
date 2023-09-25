@@ -4,8 +4,8 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "server": "nodemon app.js",
-        "temp": "nodemon /utils/temp.js"
+        "start": "node app.js",
+        "server": "nodemon app.js"
     },
     "author": "",
     "license": "ISC",
